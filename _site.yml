@@ -1,0 +1,7 @@
+output_dir: "."
+description: |
+  Introducción a RMarkdown
+navbar:
+  left:
+    - text: "Retornar a la presentación de RMarkdown"
+      href: index.html

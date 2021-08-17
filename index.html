@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Evelyn Gutierrez" />
+  <meta name="date" content="2021-08-17" />
+  <meta name="copyright" content="Evelyn Gutierrez, egutierreza@pucp.edu.pe"/>
+  <title>Taller de RMarkdown</title>
+  <style type="text/css">
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+            pre > code.sourceCode { white-space: pre; position: relative; }
+            pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+            pre > code.sourceCode > span:empty { height: 1.2em; }
+            .sourceCode { overflow: visible; }
+            code.sourceCode > span { color: inherit; text-decoration: inherit; }
+            div.sourceCode { margin: 1em 0; }
+            pre.sourceCode { margin: 0; }
+            @media screen {
+            div.sourceCode { overflow: auto; }
+            }
+            @media print {
+            pre > code.sourceCode { white-space: pre-wrap; }
+            pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+            }
+            pre.numberSource code
+              { counter-reset: source-line 0; }
+            pre.numberSource code > span
+              { position: relative; left: -4em; counter-increment: source-line; }
+            pre.numberSource code > span > a:first-child::before
+              { content: counter(source-line);
+                position: relative; left: -1em; text-align: right; vertical-align: baseline;
+                border: none; display: inline-block;
+                -webkit-touch-callout: none; -webkit-user-select: none;
+                -khtml-user-select: none; -moz-user-select: none;
+                -ms-user-select: none; user-select: none;
+                padding: 0 4px; width: 4em;
+                color: #aaaaaa;
+              }
+            pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+            div.sourceCode
+              {   }
+            @media screen {
+            pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+            }
+            code span.al { color: #ff0000; } /* Alert */
+            code span.an { color: #008000; } /* Annotation */
+            code span.at { } /* Attribute */
+            code span.bu { } /* BuiltIn */
+            code span.cf { color: #0000ff; } /* ControlFlow */
+            code span.ch { color: #008080; } /* Char */
+            code span.cn { } /* Constant */
+            code span.co { color: #008000; } /* Comment */
+            code span.cv { color: #008000; } /* CommentVar */
+            code span.do { color: #008000; } /* Documentation */
+            code span.er { color: #ff0000; font-weight: bold; } /* Error */
+            code span.ex { } /* Extension */
+            code span.im { } /* Import */
+            code span.in { color: #008000; } /* Information */
+            code span.kw { color: #0000ff; } /* Keyword */
+            code span.op { } /* Operator */
+            code span.ot { color: #ff4000; } /* Other */
+            code span.pp { color: #ff4000; } /* Preprocessor */
+            code span.sc { color: #008080; } /* SpecialChar */
+            code span.ss { color: #008080; } /* SpecialString */
+            code span.st { color: #008080; } /* String */
+            code span.va { } /* Variable */
+            code span.vs { color: #008080; } /* VerbatimString */
+            code span.wa { color: #008000; font-weight: bold; } /* Warning */
+          </style>
+  <style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; } /* Alert */
+code span.an { color: #008000; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #0000ff; } /* ControlFlow */
+code span.ch { color: #008080; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #008000; } /* Comment */
+code span.cv { color: #008000; } /* CommentVar */
+code span.do { color: #008000; } /* Documentation */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.im { } /* Import */
+code span.in { color: #008000; } /* Information */
+code span.kw { color: #0000ff; } /* Keyword */
+code span.op { } /* Operator */
+code span.ot { color: #ff4000; } /* Other */
+code span.pp { color: #ff4000; } /* Preprocessor */
+code span.sc { color: #008080; } /* SpecialChar */
+code span.ss { color: #008080; } /* SpecialString */
+code span.st { color: #008080; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #008080; } /* VerbatimString */
+code span.wa { color: #008000; font-weight: bold; } /* Warning */
+  </style>
+  <script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
+  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+  <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+  <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+  <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+  <style>h1 {font-size: 34px;}
+         h1.title {font-size: 38px;}
+         h2 {font-size: 30px;}
+         h3 {font-size: 24px;}
+         h4 {font-size: 18px;}
+         h5 {font-size: 16px;}
+         h6 {font-size: 12px;}
+         code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+         pre:not([class]) { background-color: white }</style>
+  <link href="site_libs/slidy-2/styles/slidy.css" rel="stylesheet" />
+  <script src="site_libs/slidy-2/scripts/slidy.js"></script>
+  <script src="site_libs/slidy_shiny-1/slidy_shiny.js"></script>
+  <meta name="duration" content="5" />
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Taller de RMarkdown</h1>
+  <p class="author">
+Evelyn Gutierrez
+  </p>
+  <p class="date">2021-08-17</p>
+</div>
+<div id="objetivos" class="slide section level1">
+<h1>Objetivos</h1>
+<!-- 
+Themes for slidify: https://codingclubuc3m.rbind.io/post/2019-09-24/
+
+-->
+<div style="position: fixed; top: 20; right: 0;">
+<p><img src="images/rmarkdown.png" style="width:50.0%" /></p>
+</div>
+<ul>
+<li><p>Familiarizarse con el entorno de RStudio para crear reportes.</p></li>
+<li><p>Comprender la estructura de un documento R Markdown.</p></li>
+<li><p>Comprender los diferentes formatos y los ajustes básicos.</p></li>
+<li><p>Aprender los fundamentos de la sintaxis de Markdown.</p></li>
+<li><p>Aprender a estructurar un documento .rmd para compilarlo en diferentes formatos.</p></li>
+<li><p>Aprender a compartir su documento online en RPubs.</p></li>
+</ul>
+<!--
+# 1. Objetivos
+
+## Lo que no haremos:
+
+- LaTeX para compilar documentos pdf: requiere la instalación de una distribución de TeX como [MiKTeX](http://miktex.org/download), [TinyTeX](https://yihui.name/tinytex/)...
+
+- Git y Github para guardar código y compartirlo en línea
+ 
+- **Aprender R!**
+
+-->
+</div>
+<div id="lo-que-necesitamos-como-mínimo" class="slide section level1">
+<h1>Lo que necesitamos (como mínimo)</h1>
+<p><br></p>
+<ul>
+<li><a href="https://cran.r-project.org/bin/windows/base/">R</a></li>
+<li><a href="https://rstudio.com/products/rstudio/download/">RStudio</a></li>
+<li>Paquetes y utilidades de RStudio:
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/knitr/index.html">knitr</a></li>
+<li><a href="https://rmarkdown.rstudio.com/">R Markdown</a></li>
+<li><a href="https://rmarkdown.rstudio.com/docs/articles/pandoc.html">Pandoc</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="rstudio" class="slide section level1">
+<h1><strong>RStudio</strong></h1>
+<p><br></p>
+<ul>
+<li>La interfaz básica de <strong>R</strong> no es muy intuitiva. Por esta razón no se usa mucho y se prefiere un <em>IDE</em>.</li>
+</ul>
+<center>
+<p><img src="images/screenshotR.png" /></p>
+</center>
+<p><br></p>
+<ul>
+<li>Un IDE, <em>Integrated Development Environment</em>: un editor de scripts - es un entorno mucho más amigable que facilita el trabajo (gestión de archivos, objetos y comandos, historial de funciones, autocompletado,…)</li>
+<li>El IDE más utilizado es <strong>RStudio</strong> (pero hay otros como <strong>Tinn-R</strong> o <strong>jamovi</strong>).</li>
+<li>Los comandos y funciones son los mismos para <strong>R</strong> y <strong>RStudio</strong>.</li>
+</ul>
+</div>
+<div id="instalación" class="slide section level1">
+<h1>Instalación</h1>
+<ol style="list-style-type: decimal">
+<li><p>Descargar e instalar <a href="https://cran.r-project.org/"><strong>R básico</strong></a> - Elija su sistema operativo y siga los pasos.</p></li>
+<li><p>Descargar e instalar <a href="https://www.rstudio.com/products/rstudio/download/#download"><strong>RStudio</strong></a> (u otra interfaz) - Elija la versión gratuita y su sistema operativo.</p></li>
+<li><p>Verificar si tienes los paquetes (<em>package</em>): <em>rmarkdown</em> y <em>knitr</em> en <strong>RStudio</strong>:</p></li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find.package</span>(<span class="fu">c</span>(<span class="st">&quot;rmarkdown&quot;</span>,<span class="st">&quot;knitr&quot;</span>))</span></code></pre></div>
+<pre><code>## [1] &quot;C:/Users/EvelynG/Documents/R/win-library/4.0/rmarkdown&quot;
+## [2] &quot;C:/Users/EvelynG/Documents/R/win-library/4.0/knitr&quot;</code></pre>
+<p>Si no lo tiene, puedes instalarlos con <code>install.packages("rmarkdown")</code> y <code>install.packages("knitr")</code></p>
+<p><br></p>
+<!--
+- A tener en cuenta:
+
+    + No hay actualizaciones automáticas, hay que instalar una nueva versión y volver a descargar los *paquetes* (o mover el directorio de la versión antigua y hacer `update.packages`). **RStudio** se ajustará por defecto a la versión más reciente de la máquina (puede hacerse manualmente). La versión antigua se puede desinstalar. Se recomienda actualizar la versión de R y RStudio anualmente.
+    + Algunas utilidades más especializadas pueden requerir la instalación de herramientas adicionales como [*RTools* (Windows) y *LaTeX*](http://cran.r-project.org/doc/manuals/R-admin.html#The-Windows-toolset).
+    + Paquete útil para actualizar R y otras herramientas en Windows a través de RStudio: `installr`.
+-->
+</div>
+<div id="qué-es-un-paquete-o-package" class="slide section level1">
+<h1>¿Qué es un paquete o <em>package</em>?</h1>
+<p><br></p>
+<ul>
+<li><p>Un <em>paquete</em> es un módulo (o extensión, biblioteca) que contiene un conjunto de funciones (a menudo relacionadas con un método o dominio particular)</p></li>
+<li><p>En la instalación, <strong>R</strong> viene con un conjunto de funciones básicas {base} y módulos por defecto (<em>built-in packages</em>).</p></li>
+<li><p>La comunidad desarrolla constantemente <em>paquetes</em> de funciones especializadas.</p></li>
+<li><p>Hay más de 15.000 en el sitio web oficial de <strong>R</strong> <a href="https://cran.r-project.org/web/packages/">CRAN</a>. También se pueden encontrar otros en otros lugares (Github, por ejemplo).</p></li>
+<li><p>Los paquetes deben ser <strong>descargados</strong> (<code>install.packages()</code> o pueden ser instalados a través del menú superior de RStudio <em>Tools&gt;Install packages…</em>). Solo es necesario instalarlos una vez; sin embargo, se deberán <strong>cargar</strong> (<code>library()</code> o <code>require()</code>) cada sesión que se quieran utilizar.</p></li>
+<li><p>Una función (por ejemplo, correlación, tablas de contingencia…) puede encontrarse en varios paquetes con variantes más o menos importantes (procedimientos, opciones, argumentos, resultados).</p></li>
+<li><p>Los paquetes también deben actualizarse periódicamente. Esto se puede realizar a través de: <em>Tools&gt;Check for package updates…</em>.</p></li>
+</ul>
+</div>
+<div id="qué-es-r-markdown-y-por-qué-utilizarlo" class="slide section level1">
+<h1>¿Qué es R Markdown y por qué utilizarlo?</h1>
+<!--![](images/r-m.png)-->
+<blockquote>
+<p>R + Markdown = RMarkdown</p>
+</blockquote>
+<ul>
+<li><p>R Markdown es un paquete instalado por defecto en RStudio.</p></li>
+<li><p>Es una herramienta creada para asegurar la <strong>reproducibilidad</strong> de un análisis o una investigación integrando en un único documento el texto en Markdown, el código (R u otro) y los resultados de su análisis.</p></li>
+<li><p>Evita todos los pasos de copiar y pegar tablas, gráficos, imágees, y crea documentos o presentaciones fáciles de actualizar en diferentes formatos: word, pdf, ppt, html, etc.</p></li>
+<li><p>Está optimizado para la creación de documentos html (formato que se beneficia de las opciones más interesantes).</p></li>
+</ul>
+</div>
+<div id="qué-es-r-markdown-y-por-qué-utilizarlo-1" class="slide section level1 unnumbered">
+<h1 class="unnumbered">¿Qué es R Markdown y por qué utilizarlo?</h1>
+<p><img src="images/formatexport.png" style="width:80.0%" /></p>
+</div>
+<div id="cómo-funciona" class="slide section level1">
+<h1>¿Cómo funciona?</h1>
+<p>R Markdown combina diferentes procesos para crear documentos en diferentes formatos a partir de un único archivo:</p>
+<center>
+<p><img src="images/workflow.png" style="width:75.0%" /></p>
+</center>
+</div>
+<div id="cómo-funciona-1" class="slide section level1 unnumbered">
+<h1 class="unnumbered">¿Cómo funciona?</h1>
+<ul>
+<li><p>Todo comienza con la creación de un documento <strong>.Rmd</strong> en RStudio. Un archivo R Markdown es un simple archivo de texto con una extensión .Rmd. (puede crearlo en el Bloc de notas).</p></li>
+<li><p>Para generar un reporte, en RStudio utilice el botón knit que activa la función <code>rmarkdown::render()</code> y ejecuta los bloques de código en el archivo <strong>.Rmd</strong> para incluirlos en el documento final. Estos resultados se convierten en un archivo temporal .md (que contiene el código y los resultados).</p></li>
+<li><p>Este es un bloque de código para compilar un documento y establecer el formato de salida con el argumento <em>output_format</em> de la función <code>render</code>:</p></li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rmarkdown)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">render</span>(<span class="st">&quot;1-example.Rmd&quot;</span>, <span class="at">output_format =</span> <span class="st">&quot;word_document&quot;</span>) </span></code></pre></div>
+<ul>
+<li><p>A continuación, este archivo <strong>.md</strong> es procesado por la herramienta <em>Pandoc</em>, que permite convertir el contenido de un lenguaje de marcas (<em>markup</em>) en diferentes formatos (“navaja suiza” de la conversión de formatos de documentos). Los parámetros de conversión se especifican en la cabecera <strong>YAML</strong> del documento <strong>.Rmd</strong>, donde entre otras cosas se especifica el formato final.</p></li>
+<li><p>Si el formato final deseado es pdf, se añade un paso de procesamiento adicional: <em>Pandoc</em> transformará el archivo <strong>.md</strong> en otro archivo intermedio .tex. Este archivo .tex será luego procesado por <em>LaTeX</em> en su forma final de pdf.</p></li>
+</ul>
+<!-- 
+- Tenga en cuenta que *LaTeX* es una herramienta muy poderosa para estructurar documentos, pero esta personalización específica para pdf significa que se pierde la flexibilidad multiformato de Markdown.-->
+</div>
+<div id="ejercicio-1-crear-y-compilar-un-rmd" class="slide section level1 unnumbered">
+<h1 class="unnumbered">Ejercicio 1: Crear y compilar un Rmd</h1>
+<p>Creación de un Rmd en RStudio:</p>
+<p><img src="images/crear_mkd.png" style="width:50.0%" /></p>
+</div>
+<div id="formatos-de-salida" class="slide section level1">
+<h1>Formatos de salida</h1>
+<ol style="list-style-type: decimal">
+<li><strong>Formatos de documentos:</strong>
+<ul>
+<li>html_document</li>
+<li>odt_document</li>
+<li>rtf_document</li>
+<li>word_document</li>
+<li>github_document</li>
+<li>md_document</li>
+<li>pdf_document (LaTeX/pdf)</li>
+<li>latex_document (LaTeX/pdf)</li>
+<li>beamer_presentation (LaTeX/pdf)</li>
+</ul></li>
+<li><strong>Formatos de presentación:</strong>
+<ul>
+<li>ioslides_presentation (<em>slides html</em>)</li>
+<li>slidy_presentation (<em>slides html</em>)</li>
+<li>revealjs::revealjs_presentation (<em>slides html + js</em>)</li>
+<li>powerpoint_presentation</li>
+</ul></li>
+</ol>
+</div>
+<div id="formatos-de-salida-1" class="slide section level1 unnumbered">
+<h1 class="unnumbered">Formatos de salida</h1>
+<p>Si deseamos crear un arcivo de tipo PDF utilizando Rmd, necesitaremos instalar LaTeX. Si no tienes instalado LateX, recomendamos instalar TinyTeX:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&#39;tinytex&#39;</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>()  <span class="co"># Instala TinyTeX</span></span></code></pre></div>
+<p>Esta instalación podría demorar.</p>
+</div>
+<div id="formatos-de-salida-2" class="slide section level1 unnumbered">
+<h1 class="unnumbered">Formatos de salida</h1>
+<p>Hay un gran número de <em>paquetes</em> y <em>plantillas</em> para crear diferentes tipos de documentos con una amplia variedad de estilos predefinidos: plantillas de presentación, artículos periodísticos, libros, tesis, sitios web, blogs, widgets, cuadros de mando, mapas y otras presentaciones interactivas…</p>
+<ul>
+<li><p><a href="https://github.com/yixuan/prettydoc/">prettydoc</a></p></li>
+<li><p><a href="https://bookdown.org/yihui/bookdown/">bookdown</a></p></li>
+<li><p><a href="https://bookdown.org/yihui/blogdown/">blogdown</a></p></li>
+<li><p><a href="https://github.com/rstudio/distill">distill</a></p></li>
+<li><p><a href="https://bookdown.org/yihui/rmarkdown/xaringan-format.html">xaringan</a></p></li>
+<li><p><a href="https://www.htmlwidgets.org">htmlwidgets</a></p></li>
+<li><p><a href="https://shiny.rstudio.com/reference/shiny/1.3.0/shiny-package.html">shiny</a></p></li>
+<li><p><a href="https://rstudio.github.io/leaflet/">leaflet</a></p></li>
+<li><p><a href="https://rmarkdown.rstudio.com/flexdashboard/">flexdashboard</a></p></li>
+<li><p><a href="https://revealjs.com/#/1">revealjs</a></p></li>
+<li><p><a href="http://mangothecat.github.io/rmdshower/skeleton.html">rmdshower</a></p></li>
+<li><p><a href="https://gohugo.io/templates/">Hugo</a></p></li>
+<li><p><a href="https://github.com/mitchelloharawild/vitae">vitae</a></p></li>
+<li><p>Ver <a href="https://rmarkdown.rstudio.com/gallery.html">galeria</a></p></li>
+<li><p>Hay que tener en cuenta que el uso de estas diferentes herramientas requiere el aprendizaje de una configuración/etiquetado particular que puede ir en detrimento de la interoperabilidad de los formatos.</p></li>
+<li><p>También puede crear sus propias <a href="https://rstudio.github.io/rstudio-extensions/rmarkdown_templates.html">plantillas</a> y <a href="https://bookdown.org/yihui/rmarkdown/word-document.html">estilo de documento</a></p></li>
+</ul>
+</div>
+<div id="estructura-de-un-documento-rmarkdown" class="slide section level1">
+<h1>Estructura de un documento RMarkdown</h1>
+<p>Contiene 3 partes:</p>
+<ol style="list-style-type: decimal">
+<li>Una cabecera de metadatos (<em>cabecera YAML</em>): cabecera opcional escrita en <strong>YAML</strong> rodeada de 3 guiones</li>
+<li>Texto: formateado en markdown</li>
+<li>Bloques de código: <em>códigos</em> encerrados en ```` (atajo ctrl +alt + i)</li>
+</ol>
+<p><img src="images/anatomie.png" style="width:75.0%" /></p>
+</div>
+<div id="estructura-de-un-documento-rmarkdown-1" class="slide section level1 unnumbered">
+<h1 class="unnumbered">Estructura de un documento RMarkdown</h1>
+<p><img src="images/blocs.png" style="width:85.0%" /></p>
+</div>
+<div id="metadatos" class="slide section level1">
+<h1>Metadatos</h1>
+<ul>
+<li>Metadatos básicos y campos de Ouput para definir el formato y sus opciones para configurar la presentación final</li>
+<li>Sintaxis <a href="https://en.wikipedia.org/wiki/YAML">YAML</a></li>
+</ul>
+<p><img src="images/yaml_ejemplo.png" style="width:70.0%" /></p>
+<ul>
+<li>Cada <a href="https://rmarkdown.rstudio.com/formats.html">formato de salida</a> tiene opciones específicas para personalizar la presentación final con argumentos como subvalores del campo <em>output</em>: (las subopciones deben estar con sangría).</li>
+<li>Para saber cuáles son estas opciones, consultar la ayuda: <code>?rmarkdown::html_document</code>.</li>
+<li>Si un formato de salida es proporcionado por un paquete en específico, debe ser nombrado en el campo YAML <code>output: tufte::tufte_html</code>.</li>
+</ul>
+</div>
+<div id="metadatos-1" class="slide section level1 unnumbered">
+<h1 class="unnumbered">Metadatos</h1>
+<p>También es posible controlar el formato del documento final utilizando las opciones del menú <strong>knit</strong> de RStudio. El encabezado YAML se modificarán automáticamente.</p>
+<p><img src="images/options.png" /></p>
+</div>
+<div id="texto-con-formato-markdown" class="slide section level1">
+<h1>Texto con formato Markdown</h1>
+<h2 id="sobre-markdown">Sobre Markdown</h2>
+<ul>
+<li><p><a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> es un lenguaje de marcado, una versión simplificada de html, creado por John Gruber en 2004.</p></li>
+<li><p>Se utiliza para estructurar contenidos textuales y producir documentos a partir de texto plano etiquetado.</p></li>
+</ul>
+<blockquote>
+<p>Markdown refleja la filosofía del estoicismo: el “mundo natural” consiste en texto plano, y no hay que dejarse controlar por el deseo de placer (visual). — <a href="https://bookdown.org/yihui/rmarkdown-cookbook/formatting.html">Yihui</a></p>
+</blockquote>
+<ul>
+<li><p>A menudo se compara con <a href="https://www.latex-project.org/">LaTeX</a>; otro lenguaje de marcado más potente pero mucho más complejo para producir documentos pdf.</p></li>
+<li><p>Existen varias versiones de Markdown desarrolladas por diferentes programadores. La que utiliza <a href="https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html%23raw-tex#pandoc_markdown">R Markdown</a> es la versión de <a href="https://pandoc.org/MANUAL.html">Pandoc</a> que también permite convertir los documentos en diferentes formatos.</p></li>
+<li><p>Su gran sencillez lo convierte en una herramienta más limitada en cuanto a la estructuración de documentos que el html, LaTeX y los programas de tratamiento de textos. (véase <a href="https://daringfireball.net/projects/markdown/syntax#philosophy">Gruber</a>)</p></li>
+<li><p>Por lo tanto, es útil conocer estos lenguajes (html, css, javascript, LaTeX) si quiere personalizar el formato de sus documentos (pero tenga cuidado porque el uso de html y LaTeX puede causar problemas al exportar a ciertos formatos).</p></li>
+</ul>
+<!--
+
+# Texto formateado en Markdown
+
+## ¿Qué es Markdown?
+
+> Markdown es un lenguaje de marcado (formato más o menos sencillo y fácil de editar) creado en 2004 por John Gruber con la ayuda de Aaron Swartz. Se creó con el objetivo de proporcionar una sintaxis fácil de leer y de escribir. 
+ 
+
+![](images/balisage.png)-->
+</div>
+<div id="texto-con-formato-markdown-1" class="slide section level1 unnumbered">
+<h1 class="unnumbered">Texto con formato Markdown</h1>
+<h2 id="sintaxis-básica-de-markdown">Sintaxis básica de Markdown</h2>
+<p><img src="images/Markdown_ejemplo.PNG" /></p>
+<p><a href="https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">Guía de referencia</a></p>
+<p><a href="https://www.markdowntutorial.com/">Tutorial de Markdown</a></p>
+</div>
+<div id="ejercicio-2" class="slide section level1 unnumbered">
+<h1 class="unnumbered">Ejercicio 2</h1>
+<p>Comenzar a hacer un CV en Rmd con la librería <a href="https://github.com/rstudio/pagedown">pagedown</a>.</p>
+<ol style="list-style-type: decimal">
+<li><p>Instalar la librería pagedown.</p>
+<p><code>remotes::install_github('rstudio/pagedown')</code></p></li>
+<li><p>Crear desde modelo: <em>File&gt;New File&gt;RMarkdown&gt;From Template</em></p></li>
+<li><p>Editar títulos y las siguientes secciones:</p></li>
+</ol>
+<ul>
+<li>Short bio.</li>
+<li>Experiencia Profesional.</li>
+<li>Eduación.</li>
+</ul>
+<p>Otra forma de hacer un CV en Rmd es con la librería <a href="https://github.com/mitchelloharawild/vitae">vitae.</a>. Para esto necesitarás tener instalado <span class="math inline">\(LaTex\)</span> o instalar <a href="https://yihui.org/tinytex/">Tinytex</a></p>
+</div>
+<div id="códigos-de-r-chunks" class="slide section level1">
+<h1>Códigos de R (Chunks)</h1>
+<p>El código R puede incluirse de dos maneras:</p>
+<p><br></p>
+<ol style="list-style-type: decimal">
+<li><strong>En bloques de código</strong> (<em>chunks</em>): inician con ```{r} (donde r indique el lenguaje a utilizar, y se puede poner otros como: python, sql, …)</li>
+</ol>
+<div class="sourceCode" id="cb5"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="in">mean(23, 65, 43, 34, 56) # El estilo de los bloques se define mediante la opción &quot;highlight&quot; en el YAML</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
+<ul>
+<li>Las etiquetas de bloque se pueden insertar con el botón <code>insert</code> o con el atajo de teclado <code>ctrl + alt + i</code>.</li>
+<li>Lo mejor es dividir el código que genera diferentes salidas en diferentes bloques</li>
+</ul>
+<p><br></p>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>En el texto</strong> (<em>Inline R code</em>) que comienza con <code>r</code> y termina con un acento <code>``</code>.</li>
+</ol>
+<p><strong>Código: </strong></p>
+<p><img src="images/inline.png" /></p>
+<p><strong>Resultados</strong>:</p>
+<p>La edad media de nuestros participantes es 23.</p>
+</div>
+<div id="código-r" class="slide section level1">
+<h1>Código R</h1>
+<h2 id="configuración-de-chunks.">Configuración de <em>chunks</em>.</h2>
+<ul>
+<li><p>El “comportamiento” de los bloques de código y la presentación de los resultados pueden configurarse de varias maneras.</p></li>
+<li><p>Knitr ofrece muchas<a href="https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">opciones</a> (<em>chunck options</em>) que pueden añadirse como argumentos entre las llaves de cada bloque (cada opción debe estar separada por una coma).</p></li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, chunk-label, results=&#39;hide&#39;, fig.height=4}</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
+<ul>
+<li><p>Cada bloque puede tener opcionalmente un nombre (<em>etiqueta</em>), debe ser la primera opción.</p></li>
+<li><p>Estas opciones controlan esencialmente cómo se compila (o no) el código de cada bloque y cómo se presentan (o no) los resultados de cada bloque de código.</p></li>
+<li><p>Muchos de los argumentos tienen valores lógicos: TRUE O FALSE (con un valor por defecto que debe ser cambiado si no es apropiado)</p></li>
+<li><p>Opciones globales**: Es posible establecer los valores de los argumentos para todos los bloques desde el principio incluyendo el siguiente bloque al principio del documento (por defecto cuando se crea un nuevo archivo .Rmd):</p></li>
+</ul>
+<p><img src="images/global.png" /></p>
+</div>
+<div id="código-r-1" class="slide section level1 unnumbered">
+<h1 class="unnumbered">Código R</h1>
+<h2 id="configuración-del-funcionamiento-de-los-bloques-de-código">Configuración del funcionamiento de los bloques de código</h2>
+<p><img src="images/chunks.png" style="width:70.0%" /></p>
+</div>
+<div id="código-r-2" class="slide section level1">
+<h1>Código R</h1>
+<ul>
+<li>Para presentar y subrayar fragmentos de código sin ejecutarlos, como si fueran texto, insértelos entre 2 tildes (acento grave):</li>
+</ul>
+<p><code>r mean(23, 65, 43, 34, 56)</code></p>
+<p><br></p>
+<p>Para insertar un texto en un bloque resaltado: añador triple tilde ``` una línea antes y despues del texto.</p>
+<pre><code>Texto en un bloque</code></pre>
+<pre><code>        Texto con sangría</code></pre>
+<ul>
+<li>De lo contrario, los espacios al principio de una línea nunca se tienen en cuenta</li>
+</ul>
+<p><br></p>
+<p><strong>Algunos detalles finales: </strong></p>
+<ul>
+<li><p>Es mejor añadir una línea en blanco entre diferentes elementos, como un título y un párrafo.</p></li>
+<li><p>Para hacer un salto de línea: termine la línea con dos espacios + Enter.</p></li>
+<li><p>Para añadir espacios adicionales entre líneas/secciones, utilice la etiqueta html: <code>&lt;br&gt;</code>.</p></li>
+<li><p>Para incluir comentarios que no saldrán en el documento final, utilice comentarios en html: <code>&lt;!-- Esto es un comentario --&gt;</code>.</p></li>
+</ul>
+</div>
+<div id="para-profundizar-más-en-rmarkdown" class="slide section level1">
+<h1>Para profundizar más en Rmarkdown</h1>
+<ul>
+<li><p>Yihui Xie, J. J. Allaire, Garrett Grolemund, 2020-10-14, <a href="https://bookdown.org/yihui/rmarkdown/">R Markdown: The Definitive Guide</a></p></li>
+<li><p>Yihui Xie, Christophe Dervieux, Emily Riederer, 2020-09-21, <a href="https://bookdown.org/yihui/rmarkdown-cookbook/">R Markdown Cookbook</a></p></li>
+<li><p>Yihui Xie, <a href="https://yihui.org/knitr/">knitr. Elegant, flexible, and fast dynamic report generation with R</a></p></li>
+<li><p><a href="https://rstudio.com/resources/cheatsheets/">Rmarkdown et RStudio Cheatsheets</a></p></li>
+<li><p>RStudio, <a href="https://rmarkdown.rstudio.com/gallery.HTML">RMarkdown Gallery</a></p></li>
+<li><p><a href="https://www.markdowntutorial.com/">Markdown Tutorial</a></p></li>
+<li><p>Karl Broman, <a href="http://kbroman.org/Tools4RR/assets/lectures/03_knitr_Rmd_withnotes.pdf">Writing reproducible reports. knitr with R Markdown</a></p></li>
+<li><p>Michael Clark, 2019-11-06, <a href="https://m-clark.github.io/Introduction-to-Rmarkdown/">Introduction to R Markdown</a></p></li>
+<li><p>Yan Holtz, 10 December 2018, <a href="https://holtzy.github.io/Pimp-my-rmd/">Pimp my RMD: a few tips for R Markdown</a></p></li>
+<li><p>Alison Hill · Desirée De Leon, <a href="https://rstudio-education.github.io/sharing-short-notice/#1">Sharing on Short Notice. HOW TO GET YOUR TEACHING MATERIALS ONLINE WITH R MARKDOWN</a></p></li>
+<li><p><a href="http://www.geo.uzh.ch/microsite/reproducible_research/post/rr-r-publication/">Writing publications with R</a>, Wed, Aug 17, 2016</p></li>
+<li><p>Mike Frank &amp; Chris Hartgerink, 2017-07-31, <a href="https://libscie.github.io/rmarkdown-workshop/handout.html#headers-tables-and-graphs">RMarkdown for writing reproducible scientific papers</a></p></li>
+<li><p>Marian L. Schmidt, May 11th, 2016, <a href="https://rpubs.com/marschmi/RMarkdown">Creating Dynamic Documents with RMarkdown and Knitr</a></p></li>
+<li><p>Thea Knowles, January 14, 2020, <a href="https://rpubs.com/thealk/academic-writing">RMarkdown and Bookdown for Academic Writing in R</a></p></li>
+</ul>
+</div>
+<div id="más-temas-de-rmarkdown" class="slide section level1 unnumbered">
+<h1 class="unnumbered">Más temas de Rmarkdown</h1>
+<p><br></p>
+<p><strong>Siguiente sesión:</strong></p>
+<p><a href="parte2_personalizar.html">Personalizar Rmd</a></p>
+<p><br></p>
+<p><br></p>
+<p><strong>Compartir documentos en línea: </strong></p>
+<ul>
+<li><a href="https://rpubs.com/">RPubs</a></li>
+<li><a href="https://app.netlify.com/drop">Netlify</a></li>
+<li><a href="https://resources.github.com/whitepapers/github-and-rstudio/">Github</a></li>
+</ul>
+</div>
+<div class="slide section level1">
+
+</div>
+
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+</body>
+</html>
