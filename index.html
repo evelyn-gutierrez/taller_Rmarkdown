@@ -7,7 +7,6 @@
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
   <meta name="author" content="Evelyn Gutierrez" />
-  <meta name="date" content="2021-08-18" />
   <meta name="copyright" content="Evelyn Gutierrez, egutierreza@pucp.edu.pe"/>
   <title>Taller de RMarkdown</title>
   <style type="text/css">
@@ -163,7 +162,6 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
   <p class="author">
 Evelyn Gutierrez
   </p>
-  <p class="date">2021-08-18</p>
 </div>
 <div id="objetivos" class="slide section level1">
 <h1>Objetivos</h1>
@@ -232,10 +230,14 @@ Themes for slidify: https://codingclubuc3m.rbind.io/post/2019-09-24/
 <li><p>Descargar e instalar <a href="https://www.rstudio.com/products/rstudio/download/#download"><strong>RStudio</strong></a> (u otra interfaz) - Elija la versión gratuita y su sistema operativo.</p></li>
 <li><p>Verificar si tienes los paquetes (<em>package</em>): <em>rmarkdown</em> y <em>knitr</em> en <strong>RStudio</strong>:</p></li>
 </ol>
+<p>En la consola de R, utilizar lo siguiente:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find.package</span>(<span class="fu">c</span>(<span class="st">&quot;rmarkdown&quot;</span>,<span class="st">&quot;knitr&quot;</span>))</span></code></pre></div>
 <pre><code>## [1] &quot;C:/Users/EvelynG/Documents/R/win-library/4.0/rmarkdown&quot;
 ## [2] &quot;C:/Users/EvelynG/Documents/R/win-library/4.0/knitr&quot;</code></pre>
-<p>Si no lo tiene, puedes instalarlos con <code>install.packages("rmarkdown")</code> y <code>install.packages("knitr")</code></p>
+<p>Si no lo tiene, puedes instalarlos con los siguiente comandos.</p>
+<p>En la consola de R, utilizar lo siguiente:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;rmarkdown&quot;</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;knitr&quot;</span>)</span></code></pre></div>
 <p><br></p>
 <!--
 - A tener en cuenta:
@@ -289,8 +291,8 @@ Themes for slidify: https://codingclubuc3m.rbind.io/post/2019-09-24/
 <li><p>Para generar un reporte, en RStudio utilice el botón knit que activa la función <code>rmarkdown::render()</code> y ejecuta los bloques de código en el archivo <strong>.Rmd</strong> para incluirlos en el documento final. Estos resultados se convierten en un archivo temporal .md (que contiene el código y los resultados).</p></li>
 <li><p>Este es un bloque de código para compilar un documento y establecer el formato de salida con el argumento <em>output_format</em> de la función <code>render</code>:</p></li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rmarkdown)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">render</span>(<span class="st">&quot;1-example.Rmd&quot;</span>, <span class="at">output_format =</span> <span class="st">&quot;word_document&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rmarkdown)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">render</span>(<span class="st">&quot;1-example.Rmd&quot;</span>, <span class="at">output_format =</span> <span class="st">&quot;word_document&quot;</span>) </span></code></pre></div>
 <ul>
 <li><p>A continuación, este archivo <strong>.md</strong> es procesado por la herramienta <em>Pandoc</em>, que permite convertir el contenido de un lenguaje de marcas (<em>markup</em>) en diferentes formatos (“navaja suiza” de la conversión de formatos de documentos). Los parámetros de conversión se especifican en la cabecera <strong>YAML</strong> del documento <strong>.Rmd</strong>, donde entre otras cosas se especifica el formato final.</p></li>
 <li><p>Si el formato final deseado es pdf, se añade un paso de procesamiento adicional: <em>Pandoc</em> transformará el archivo <strong>.md</strong> en otro archivo intermedio .tex. Este archivo .tex será luego procesado por <em>LaTeX</em> en su forma final de pdf.</p></li>
@@ -331,10 +333,11 @@ Creación de un Rmd en RStudio:
 </div>
 <div id="formatos-de-salida-1" class="slide section level1 unnumbered">
 <h1 class="unnumbered">Formatos de salida</h1>
-<p>Si deseamos crear un arcivo de tipo PDF utilizando Rmd, necesitaremos instalar LaTeX. Si no tienes instalado LateX, recomendamos instalar TinyTeX:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&#39;tinytex&#39;</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>()  <span class="co"># Instala TinyTeX</span></span></code></pre></div>
-<p>Esta instalación podría demorar.</p>
+<p><strong>Opcional:</strong> Para crear archivos PDF utilizando RMarkdown, necesitaremos tener instalado una distribución de LaTeX. Si no tienes instalado LateX, recomendamos instalar <a href="https://yihui.org/tinytex/">TinyTeX</a>.</p>
+<p>En la consola de R, utilizar lo siguiente:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&#39;tinytex&#39;</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>()  <span class="co"># Instala TinyTeX</span></span></code></pre></div>
+<p>TinyTex es una distribución ligera de LaTex. Sin embargo, esta instalación podría demorar según tu conexión a internet.</p>
 </div>
 <div id="formatos-de-salida-2" class="slide section level1 unnumbered">
 <h1 class="unnumbered">Formatos de salida</h1>
@@ -362,9 +365,9 @@ Creación de un Rmd en RStudio:
 <h1>Estructura de un documento RMarkdown</h1>
 <p>Contiene 3 partes:</p>
 <ol style="list-style-type: decimal">
-<li>Una cabecera de metadatos (<em>cabecera YAML</em>): cabecera opcional escrita en <strong>YAML</strong> rodeada de 3 guiones</li>
+<li>Un encabezado de metadatos (<em>encabezado YAML</em>): encabezado escrito en <a href="https://en.wikipedia.org/wiki/YAML"><strong>YAML</strong></a> rodeado por 3 guiones</li>
 <li>Texto: formateado en markdown</li>
-<li>Bloques de código: <em>códigos</em> encerrados en ```` (atajo ctrl +alt + i)</li>
+<li>Bloques de código: <em>códigos</em> encerrados entre triple tilde invertida (acentos agudos) ```` (Para crearlos rapidamente se puede usar <em>ctrl +alt + i</em>)</li>
 </ol>
 <p><img src="images/estructura.png" style="width:75.0%" /></p>
 </div>
@@ -447,9 +450,9 @@ Creación de un Rmd en RStudio:
 <ol style="list-style-type: decimal">
 <li><strong>En bloques de código</strong> (<em>chunks</em>): inician con ```{r} (donde r indique el lenguaje a utilizar, y se puede poner otros como: python, sql, …)</li>
 </ol>
-<div class="sourceCode" id="cb5"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="in">mean(23, 65, 43, 34, 56) # El estilo de los bloques se define mediante la opción &quot;highlight&quot; en el YAML</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="in">mean(23, 65, 43, 34, 56) # El estilo de los bloques se define mediante la opción &quot;highlight&quot; en el YAML</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
 <ul>
 <li>Las etiquetas de bloque se pueden insertar con el botón <code>insert</code> o con el atajo de teclado <code>ctrl + alt + i</code>.</li>
 <li>Lo mejor es dividir el código que genera diferentes salidas en diferentes bloques</li>
@@ -470,8 +473,8 @@ Creación de un Rmd en RStudio:
 <li><p>El “comportamiento” de los bloques de código y la presentación de los resultados pueden configurarse de varias maneras.</p></li>
 <li><p>Knitr ofrece muchas<a href="https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">opciones</a> (<em>chunck options</em>) que pueden añadirse como argumentos entre las llaves de cada bloque (cada opción debe estar separada por una coma).</p></li>
 </ul>
-<div class="sourceCode" id="cb6"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, chunk-label, results=&#39;hide&#39;, fig.height=4}</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, chunk-label, results=&#39;hide&#39;, fig.height=4}</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
 <ul>
 <li><p>Cada bloque puede tener opcionalmente un nombre (<em>etiqueta</em>), debe ser la primera opción.</p></li>
 <li><p>Estas opciones controlan esencialmente cómo se compila (o no) el código de cada bloque y cómo se presentan (o no) los resultados de cada bloque de código.</p></li>
@@ -539,9 +542,6 @@ Creación de un Rmd en RStudio:
 <li><a href="https://app.netlify.com/drop">Netlify</a></li>
 <li><a href="https://resources.github.com/whitepapers/github-and-rstudio/">Github</a></li>
 </ul>
-</div>
-<div class="slide section level1">
-
 </div>
 
   <!-- dynamically load mathjax for compatibility with self-contained -->
