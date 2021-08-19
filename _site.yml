@@ -3,5 +3,5 @@ description: |
   Introducción a RMarkdown
 navbar:
   left:
-    - text: "Volver a la Introducción a RMarkdown"
+    - text: "Introducción a RMarkdown"
       href: index.html

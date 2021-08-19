@@ -11,7 +11,6 @@
 
 <meta name="author" content="Evelyn Gutierrez" />
 
-<meta name="date" content="2021-08-18" />
 
 <title>Rmarkdown - Otra utilidades</title>
 
@@ -410,6 +409,9 @@ div.tocify {
         <li>
   <a href="index.html">Volver a la Introducción a RMarkdown</a>
 </li>
+<li>
+  <a href="Ejemplos.html">Modelos</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -424,7 +426,6 @@ div.tocify {
 
 <h1 class="title toc-ignore">Rmarkdown - Otra utilidades</h1>
 <h4 class="author">Evelyn Gutierrez<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></h4>
-<h4 class="date">2021-08-18</h4>
 
 </div>
 
@@ -465,7 +466,7 @@ div.tocify {
 <pre><code># (H1)  = 1.
 ## (H2) = 1.1 (Si no hay H1, dará como resultado 0.1)</code></pre>
 <ul>
-<li>Para no numerar algunos títulos: añada <code>{-}</code> o <code>{.unnumbered}</code> después del título</li>
+<li>Para no numerar alguno de los títulos: añadir <code>{-}</code> o <code>{.unnumbered}</code> después del título</li>
 </ul>
 <hr />
 <p></br></p>
@@ -512,6 +513,7 @@ div.tocify {
 <h2 class="unnumbered"></h2>
 <hr />
 <p></br></p>
+<p>Más sobre pestañas: <a href="https://bookdown.org/yihui/rmarkdown-cookbook/html-tabs.html">https://bookdown.org/yihui/rmarkdown-cookbook/html-tabs.html</a></p>
 </div>
 </div>
 <div id="formatear-gráficos" class="section level1" number="4">
@@ -546,11 +548,9 @@ Une légende
 </div>
 <hr />
 <p></br></p>
-</div>
-<div id="estilos-stylescss" class="section level1" number="5">
-<h1 number="5"><span class="header-section-number">5</span> Estilos (Styles/CSS)</h1>
-<div id="usar-temas-predefinidos" class="section level2" number="5.1">
-<h2 number="5.1"><span class="header-section-number">5.1</span> Usar temas predefinidos:</h2>
+<p>#Estilos (Styles/CSS)</p>
+<div id="usar-temas-predefinidos" class="section level2" number="4.1">
+<h2 number="4.1"><span class="header-section-number">4.1</span> Usar temas predefinidos:</h2>
 <ul>
 <li><p><code>theme</code>: default, cerulean, journal, flatly, darkly, readable, spacelab, united, cosmo, lumen, paper, sandstone, simplex, yeti (null si no quieres un tema, por ejemplo si quieres usar tu propio css)</p></li>
 <li><p><code>highlight</code> : para definir la apariencia de la sintaxis: tango, pygments, kate, monochrome, espresso, zenburn, haddock, textmate (u opción <code>null</code>)</p></li>
@@ -565,8 +565,8 @@ Une légende
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
 <p></br></p>
 </div>
-<div id="usar-estilo-.css" class="section level2" number="5.2">
-<h2 number="5.2"><span class="header-section-number">5.2</span> Usar estilo .CSS :</h2>
+<div id="usar-estilo-.css" class="section level2" number="4.2">
+<h2 number="4.2"><span class="header-section-number">4.2</span> Usar estilo <strong>.css</strong> :</h2>
 <div class="sourceCode" id="cb10"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Ejemplo&quot;</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
@@ -577,8 +577,33 @@ Une légende
 <span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
 <p></br></p>
 </div>
-<div id="estilos-predefinidos-a-los-bloques-de-resultados" class="section level2" number="5.3">
-<h2 number="5.3"><span class="header-section-number">5.3</span> Estilos predefinidos a los bloques de resultados</h2>
+<div id="estilos-para-documentos-word." class="section level2" number="4.3">
+<h2 number="4.3"><span class="header-section-number">4.3</span> Estilos para documentos word.</h2>
+<p>Para crear un documento Word a partir de R Markdown, se especifica el formato <code>word_document</code> en la cabecera YAML del documento.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Habits&quot;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> John Doe</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> March 22, 2005</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">word_document</span><span class="kw">:</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">reference_docx</span><span class="kw">:</span><span class="at"> my-styles.docx</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
+<ul>
+<li>Puede crear una <em>plantilla</em> <em>(documento de referencia de estilo</em>) para cambiar el diseño del documento de Word.</li>
+<li>Esta plantilla debe hacerce un documento Rmd con el formato word_document.</li>
+<li>A continuación, abra el documento en Word y edite los estilos y guárdelo con otro nombre como archivo `.docx’ y añádalo al YAML.</li>
+</ul>
+<p>Ver más en :</p>
+<ul>
+<li><a href="https://vimeo.com/110804387" class="uri">https://vimeo.com/110804387</a></li>
+<li><a href="https://bookdown.org/yihui/rmarkdown-cookbook/word-template.html" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/word-template.html</a></li>
+<li><a href="https://rmarkdown.rstudio.com/articles_docx.html" class="uri">https://rmarkdown.rstudio.com/articles_docx.html</a></li>
+</ul>
+<hr />
+<p></br></p>
+</div>
+<div id="estilos-predefinidos-para-los-bloques-de-resultados" class="section level2" number="4.4">
+<h2 number="4.4"><span class="header-section-number">4.4</span> Estilos predefinidos para los bloques de resultados</h2>
 <ul>
 <li>Personalice los bloques de código con las opciones <code>class.source</code> y <code>class.output</code>: <a href="https://getbootstrap.com/docs/3.4/css/#helper-classes">clases CSS predefinidas</a> que se pueden cambiar o no: “bg-primary”, “bg-success”, “bg-info”, “bg-warning”, “bg-danger”</li>
 </ul>
@@ -587,29 +612,29 @@ Une légende
 1 + 1
 ```</code></pre>
 <p><strong>Resultado:</strong></p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">+</span><span class="dv">1</span></span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">+</span><span class="dv">1</span></span></code></pre></div>
 <pre class="bg-info"><code>## [1] 2</code></pre>
 <p><strong>Código:</strong></p>
 <pre><code>```{r class.output=&quot;bg-danger&quot;}
 1 + 1
 ```</code></pre>
 <p><strong>Resultado:</strong></p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">+</span><span class="dv">1</span></span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">+</span><span class="dv">1</span></span></code></pre></div>
 <pre class="bg-danger"><code>## [1] 2</code></pre>
 <p><br></p>
 </div>
-<div id="defina-sus-propios-estilos-en-el-archivo-.rmd" class="section level2" number="5.4">
-<h2 number="5.4"><span class="header-section-number">5.4</span> Defina sus propios estilos en el archivo .rmd</h2>
+<div id="defina-sus-propios-estilos-en-el-archivo-.rmd" class="section level2" number="4.5">
+<h2 number="4.5"><span class="header-section-number">4.5</span> Defina sus propios estilos en el archivo .rmd</h2>
 <ol style="list-style-type: decimal">
 <li>Define el estilo de una clase <code>resultado</code>:</li>
 </ol>
-<div class="sourceCode" id="cb17"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="at">&lt;style type=&quot;text/css&quot;&gt;</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="at">.resultado {</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">background-color</span><span class="kw">:</span><span class="at"> yellow;</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">border</span><span class="kw">:</span><span class="at"> 3px solid blue;</span></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">font-weight</span><span class="kw">:</span><span class="at"> bold;</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="at">}</span></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="at">&lt;/style&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="at">&lt;style type=&quot;text/css&quot;&gt;</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="at">.resultado {</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">background-color</span><span class="kw">:</span><span class="at"> yellow;</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">border</span><span class="kw">:</span><span class="at"> 3px solid blue;</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">font-weight</span><span class="kw">:</span><span class="at"> bold;</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="at">}</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="at">&lt;/style&gt;</span></span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>Asigna la clase <code>resultado</code> a los bloques con la opción <code>class.source</code>.</li>
 </ol>
@@ -618,28 +643,38 @@ Une légende
 mtcars[1:5, &quot;mpg&quot;]
 ```</code></pre>
 <p><strong>Resultado:</strong></p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r resultado"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>mtcars[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="st">&quot;mpg&quot;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r resultado"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>mtcars[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="st">&quot;mpg&quot;</span>]</span></code></pre></div>
 <pre><code>## [1] 21.0 21.0 22.8 21.4 18.7</code></pre>
 <hr />
 <p></br></p>
 </div>
 </div>
-<div id="cerrar-bloques-de-código" class="section level1" number="6">
-<h1 number="6"><span class="header-section-number">6</span> Cerrar bloques de código</h1>
+<div id="incrustar-una-página-web." class="section level1" number="5">
+<h1 number="5"><span class="header-section-number">5</span> Incrustar una página web.</h1>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_url</span>(<span class="st">&quot;https://pebiba-taller-rmd.netlify.app/&quot;</span>)</span></code></pre></div>
+<iframe src="https://pebiba-taller-rmd.netlify.app/" width="672" height="400px">
+</iframe>
+<p>Ver más: (<a href="https://bookdown.org/yihui/rmarkdown-cookbook/include-url.html" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/include-url.html</a>)[<a href="https://bookdown.org/yihui/rmarkdown-cookbook/include-url.html" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/include-url.html</a>]</p>
+<p></br></p>
+</div>
+<div id="más-sobre-los-r-chunks" class="section level1" number="6">
+<h1 number="6"><span class="header-section-number">6</span> Más sobre los R <em>Chunks</em>:</h1>
+<div id="compactar-bloques-de-código" class="section level2" number="6.1">
+<h2 number="6.1"><span class="header-section-number">6.1</span> Compactar bloques de código</h2>
 <p>Para limitar el espacio que ocupan los bloques de código, es posible “cerrarlos” por defecto con la opción <code>code_fold</code> en el campo html_document de la cabecera o limitar la longitud con un <a href="https://bookdown.org/yihui/rmarkdown-cookbook/html-scroll.html">scroll in css</a></p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Ejemplo&quot;</span></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html_document</span><span class="kw">:</span></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">code_folding</span><span class="kw">:</span><span class="at"> hide</span></span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Ejemplo&quot;</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html_document</span><span class="kw">:</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">code_folding</span><span class="kw">:</span><span class="at"> hide</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
 <p>No es posible plegar sólo la salida de código con las opciones del bloque de código, pero se puede hacer con javascript. Sin embargo, es posible limitar la altura del bloque añadiendo un desplazamiento con las opciones <code>attr.source</code> y <code>attr.output</code>.</p>
 <p><strong>Código</strong></p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, attr.output=&#39;style=&quot;max-height: 100px;&quot;&#39;}</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="in">1:300</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, attr.output=&#39;style=&quot;max-height: 100px;&quot;&#39;}</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="in">1:300</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
 <p><strong>Resultado:</strong></p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">300</span></span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">300</span></span></code></pre></div>
 <pre style="max-height: 100px;"><code>##   [1]   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18
 ##  [19]  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36
 ##  [37]  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53  54
@@ -662,8 +697,8 @@ mtcars[1:5, &quot;mpg&quot;]
 <hr />
 <p></br></p>
 </div>
-<div id="bloques-de-código-en-el-apéndice" class="section level1" number="7">
-<h1 number="7"><span class="header-section-number">7</span> Bloques de código en el apéndice</h1>
+<div id="chunks-en-el-apéndice" class="section level2" number="6.2">
+<h2 number="6.2"><span class="header-section-number">6.2</span> Chunks en el apéndice</h2>
 <ul>
 <li>Por defecto, los bloques de código y sus resultados aparecen en su lugar en el texto, pero todos los bloques de código pueden añadirse al final del documento en <a href="https://bookdown.org/yihui/rmarkdown-cookbook/code-appendix.html">apéndice</a> añadiendo un bloque de código con los argumentos <code>ref.label</code> y la función <code>knitr::all_labels</code>.</li>
 <li>El argumento <code>echo = FALSE</code> debe añadirse a los bloques de código.</li>
@@ -674,11 +709,11 @@ mtcars[1:5, &quot;mpg&quot;]
 <hr />
 <p></br></p>
 </div>
-<div id="separar-bloque-de-resultados" class="section level1" number="8">
-<h1 number="8"><span class="header-section-number">8</span> Separar bloque de resultados</h1>
-<p>Presentar el resultado de un bloque de código en otro lugar que no sea directamente abajo</p>
+<div id="separar-bloque-de-resultados" class="section level2" number="6.3">
+<h2 number="6.3"><span class="header-section-number">6.3</span> Separar bloque de resultados</h2>
+<p>Servira para presentar el resultado de un bloque de código en otro lugar que no sea directamente bajo el código.</p>
 <ul>
-<li>Presentamos el bloque de código</li>
+<li>Primero, creamos el bloque de código (<em>chunk</em>):</li>
 </ul>
 <pre><code>```{r grafico1, dev=&#39;png&#39;, fig.show=&#39;hide&#39;}
 plot(cars)
@@ -692,33 +727,33 @@ plot(cars)
 <hr />
 <p></br></p>
 </div>
-<div id="descargar-el-archivo-fuente-.rmd" class="section level1" number="9">
-<h1 number="9"><span class="header-section-number">9</span> Descargar el archivo fuente .rmd</h1>
-<p>Para añadir un botón de descarga <em>Code&gt;Download Rmd</em> en la parte superior derecha y permitir la descarga del archivo R Markdown usar la opción <code>code_download</code> en el YAML.</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Ejemplo&quot;</span></span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html_document</span><span class="kw">:</span></span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">code_download</span><span class="kw">:</span><span class="at"> </span><span class="ch">TRUE</span></span>
-<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
+<div id="descargar-todo-el-código-fuente-.rmd" class="section level2" number="6.4">
+<h2 number="6.4"><span class="header-section-number">6.4</span> Descargar todo el código fuente <em>.Rmd</em></h2>
+<p>Para añadir un botón de descarga <em>Code&gt;Download Rmd</em> en la parte superior derecha y permitir la descarga del archivo R Markdown se puede usar la opción <code>code_download</code> en el YAML.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Ejemplo&quot;</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html_document</span><span class="kw">:</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">code_download</span><span class="kw">:</span><span class="at"> </span><span class="ch">TRUE</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
 <hr />
 <p></br></p>
 </div>
-<div id="tablas" class="section level1" number="10">
-<h1 number="10"><span class="header-section-number">10</span> Tablas</h1>
+</div>
+<div id="tablas" class="section level1" number="7">
+<h1 number="7"><span class="header-section-number">7</span> Tablas</h1>
 <ul>
 <li><p>Por defecto, R Markdown presenta las tablas como en la consola de R, pero hay varias opciones para modificar su diseño.</p></li>
 <li><p>La modificación de las tablas puede ser más o menos compleja y puede variar en función del formato de salida.</p></li>
 <li><p>La forma más eficiente de presentar una tabla es con la función <a href="https://bookdown.org/yihui/rmarkdown-cookbook/kable.html#kable-formats">knitr::kable()</a> que tiene varios argumentos para establecer la presentación de la tabla.</p></li>
 <li><p>Ver también <a href="https://haozhu233.github.io/kableExtra/">paquete kableExtra</a> que puede crear tablas para html, pdf y word.</p></li>
-<li><p>Puede incluir el pie de foto con la opción de pie de foto =</p></li>
 </ul>
 <p><strong>Código</strong></p>
 <pre><code>```{r table-cars, results = &quot;asis&quot;}
 knitr::kable(cars[1:5, ], caption = &#39;Título de esta tabla.&#39;)
 ```</code></pre>
 <p><strong>Resultado:</strong></p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(cars[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, ], <span class="at">caption =</span> <span class="st">&#39;Un titre&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(cars[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, ], <span class="at">caption =</span> <span class="st">&#39;Un titre&#39;</span>)</span></code></pre></div>
 <table>
 <caption>Un titre</caption>
 <thead>
@@ -752,18 +787,18 @@ knitr::kable(cars[1:5, ], caption = &#39;Título de esta tabla.&#39;)
 </table>
 <hr />
 <p></br></p>
-<div id="modificar-la-presentación." class="section level3" number="10.0.1">
-<h3 number="10.0.1"><span class="header-section-number">10.0.1</span> Modificar la presentación.</h3>
+<div id="modificar-la-presentación." class="section level3" number="7.0.1">
+<h3 number="7.0.1"><span class="header-section-number">7.0.1</span> Modificar la presentación.</h3>
 <ul>
 <li>´La opción <code>df_print</code> en YAML sirve para definir la presentación de tablas para los documentos <code>html_document</code>.</li>
 <li>Valores posibles: default, kable, tibble, paged</li>
 </ul>
-<div class="sourceCode" id="cb31"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Ejemplo paged&quot;</span></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html_document</span><span class="kw">:</span></span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">df_print</span><span class="kw">:</span><span class="at"> paged</span></span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Ejemplo paged&quot;</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html_document</span><span class="kw">:</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">df_print</span><span class="kw">:</span><span class="at"> paged</span></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
 <pre class="{r}"><code>mtcars</code></pre>
 <p>Para la opción <code>paged</code>, se pueden especificar varios argumentos en cada código chunk ( max.print, rows.print, cols.print, pages.print,rownames.print … )</p>
 <p><strong>Código</strong></p>
@@ -771,7 +806,7 @@ knitr::kable(cars[1:5, ], caption = &#39;Título de esta tabla.&#39;)
 mtcars
 ```</code></pre>
 <p><strong>Resultados:</strong></p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>mtcars</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>mtcars</span></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["mpg"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["cyl"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["disp"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["hp"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["drat"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["wt"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["qsec"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["vs"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["am"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["gear"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["carb"],"name":[11],"type":["dbl"],"align":["right"]}],"data":[{"1":"21.0","2":"6","3":"160.0","4":"110","5":"3.90","6":"2.620","7":"16.46","8":"0","9":"1","10":"4","11":"4","_rn_":"Mazda RX4"},{"1":"21.0","2":"6","3":"160.0","4":"110","5":"3.90","6":"2.875","7":"17.02","8":"0","9":"1","10":"4","11":"4","_rn_":"Mazda RX4 Wag"},{"1":"22.8","2":"4","3":"108.0","4":"93","5":"3.85","6":"2.320","7":"18.61","8":"1","9":"1","10":"4","11":"1","_rn_":"Datsun 710"},{"1":"21.4","2":"6","3":"258.0","4":"110","5":"3.08","6":"3.215","7":"19.44","8":"1","9":"0","10":"3","11":"1","_rn_":"Hornet 4 Drive"},{"1":"18.7","2":"8","3":"360.0","4":"175","5":"3.15","6":"3.440","7":"17.02","8":"0","9":"0","10":"3","11":"2","_rn_":"Hornet Sportabout"},{"1":"18.1","2":"6","3":"225.0","4":"105","5":"2.76","6":"3.460","7":"20.22","8":"1","9":"0","10":"3","11":"1","_rn_":"Valiant"},{"1":"14.3","2":"8","3":"360.0","4":"245","5":"3.21","6":"3.570","7":"15.84","8":"0","9":"0","10":"3","11":"4","_rn_":"Duster 360"},{"1":"24.4","2":"4","3":"146.7","4":"62","5":"3.69","6":"3.190","7":"20.00","8":"1","9":"0","10":"4","11":"2","_rn_":"Merc 240D"},{"1":"22.8","2":"4","3":"140.8","4":"95","5":"3.92","6":"3.150","7":"22.90","8":"1","9":"0","10":"4","11":"2","_rn_":"Merc 230"},{"1":"19.2","2":"6","3":"167.6","4":"123","5":"3.92","6":"3.440","7":"18.30","8":"1","9":"0","10":"4","11":"4","_rn_":"Merc 280"},{"1":"17.8","2":"6","3":"167.6","4":"123","5":"3.92","6":"3.440","7":"18.90","8":"1","9":"0","10":"4","11":"4","_rn_":"Merc 280C"},{"1":"16.4","2":"8","3":"275.8","4":"180","5":"3.07","6":"4.070","7":"17.40","8":"0","9":"0","10":"3","11":"3","_rn_":"Merc 450SE"},{"1":"17.3","2":"8","3":"275.8","4":"180","5":"3.07","6":"3.730","7":"17.60","8":"0","9":"0","10":"3","11":"3","_rn_":"Merc 450SL"},{"1":"15.2","2":"8","3":"275.8","4":"180","5":"3.07","6":"3.780","7":"18.00","8":"0","9":"0","10":"3","11":"3","_rn_":"Merc 450SLC"},{"1":"10.4","2":"8","3":"472.0","4":"205","5":"2.93","6":"5.250","7":"17.98","8":"0","9":"0","10":"3","11":"4","_rn_":"Cadillac Fleetwood"},{"1":"10.4","2":"8","3":"460.0","4":"215","5":"3.00","6":"5.424","7":"17.82","8":"0","9":"0","10":"3","11":"4","_rn_":"Lincoln Continental"},{"1":"14.7","2":"8","3":"440.0","4":"230","5":"3.23","6":"5.345","7":"17.42","8":"0","9":"0","10":"3","11":"4","_rn_":"Chrysler Imperial"},{"1":"32.4","2":"4","3":"78.7","4":"66","5":"4.08","6":"2.200","7":"19.47","8":"1","9":"1","10":"4","11":"1","_rn_":"Fiat 128"},{"1":"30.4","2":"4","3":"75.7","4":"52","5":"4.93","6":"1.615","7":"18.52","8":"1","9":"1","10":"4","11":"2","_rn_":"Honda Civic"},{"1":"33.9","2":"4","3":"71.1","4":"65","5":"4.22","6":"1.835","7":"19.90","8":"1","9":"1","10":"4","11":"1","_rn_":"Toyota Corolla"},{"1":"21.5","2":"4","3":"120.1","4":"97","5":"3.70","6":"2.465","7":"20.01","8":"1","9":"0","10":"3","11":"1","_rn_":"Toyota Corona"},{"1":"15.5","2":"8","3":"318.0","4":"150","5":"2.76","6":"3.520","7":"16.87","8":"0","9":"0","10":"3","11":"2","_rn_":"Dodge Challenger"},{"1":"15.2","2":"8","3":"304.0","4":"150","5":"3.15","6":"3.435","7":"17.30","8":"0","9":"0","10":"3","11":"2","_rn_":"AMC Javelin"},{"1":"13.3","2":"8","3":"350.0","4":"245","5":"3.73","6":"3.840","7":"15.41","8":"0","9":"0","10":"3","11":"4","_rn_":"Camaro Z28"},{"1":"19.2","2":"8","3":"400.0","4":"175","5":"3.08","6":"3.845","7":"17.05","8":"0","9":"0","10":"3","11":"2","_rn_":"Pontiac Firebird"},{"1":"27.3","2":"4","3":"79.0","4":"66","5":"4.08","6":"1.935","7":"18.90","8":"1","9":"1","10":"4","11":"1","_rn_":"Fiat X1-9"},{"1":"26.0","2":"4","3":"120.3","4":"91","5":"4.43","6":"2.140","7":"16.70","8":"0","9":"1","10":"5","11":"2","_rn_":"Porsche 914-2"},{"1":"30.4","2":"4","3":"95.1","4":"113","5":"3.77","6":"1.513","7":"16.90","8":"1","9":"1","10":"5","11":"2","_rn_":"Lotus Europa"},{"1":"15.8","2":"8","3":"351.0","4":"264","5":"4.22","6":"3.170","7":"14.50","8":"0","9":"1","10":"5","11":"4","_rn_":"Ford Pantera L"},{"1":"19.7","2":"6","3":"145.0","4":"175","5":"3.62","6":"2.770","7":"15.50","8":"0","9":"1","10":"5","11":"6","_rn_":"Ferrari Dino"},{"1":"15.0","2":"8","3":"301.0","4":"335","5":"3.54","6":"3.570","7":"14.60","8":"0","9":"1","10":"5","11":"8","_rn_":"Maserati Bora"},{"1":"21.4","2":"4","3":"121.0","4":"109","5":"4.11","6":"2.780","7":"18.60","8":"1","9":"1","10":"4","11":"2","_rn_":"Volvo 142E"}],"options":{"columns":{"min":{},"max":[3]},"rows":{"min":[3],"max":[3]},"pages":{}}}
@@ -779,47 +814,59 @@ mtcars
 </div>
 <hr />
 <p></br></p>
-</div>
-</div>
-<div id="citas-y-bibliografía" class="section level1" number="11">
-<h1 number="11"><span class="header-section-number">11</span> Citas y bibliografía</h1>
-<ul>
-<li>Hay varias formas de insertar las citas, pero la más recomendada es cargar las referencias en un archivo BibTeX (.bib).</li>
-<li>A continuación, incluya en la cabecera el argumento bibliografía en el YAML y establezca su valor con la ruta del archivo BibTeX en su ordenador.</li>
-<li>Para cambiar el formato de las citas, descargue el estilo (archivo csl) de la lista [Zotero] (<a href="https://www.zotero.org/styles" class="uri">https://www.zotero.org/styles</a>) e inclúyalo en el YAML.</li>
-</ul>
-<div class="sourceCode" id="cb35"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Ejemplo&quot;</span></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html_document</span><span class="kw">:</span></span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> citations.bib</span></span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="fu">csl</span><span class="kw">:</span><span class="at"> apa-5th-edition.csl</span></span>
-<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
-<ul>
-<li><p>Par défaut la bibliographie apparaitra à la fin du document, mais on peut forcer le déplacement des références en utilisant un div: <code>&lt;div id="refs"&gt;&lt;/div&gt;</code></p></li>
-<li><p>package citr</p></li>
-<li><p>Après dans texte inclure <span class="citation">[@Ref-1]</span> ou <span class="citation">[@ref-1; @ref-2; @ref-3]</span> pour parenthèses ou <span class="citation">@R-base</span> pour référer à entrée dans le fichier. Pandoc va générer automatiquement une référence à la fin du document.</p></li>
-<li><p>Pour inclure un titre dans la bibliographie qui n’a pas été citée dans le document, il faut définir un champ nocite dans l’entête</p></li>
-</ul>
-<pre><code>---
-nocite: &#39;@*&#39;
+<!--
+# Citas y bibliografía
+
+- Hay varias formas de insertar las citas, pero la más recomendada es cargar las referencias en un archivo BibTeX (.bib). 
+- A continuación, incluya en la cabecera el argumento bibliografía en el YAML y establezca su valor con la ruta del archivo BibTeX en su ordenador. 
+- Para cambiar el formato de las citas, descargue el estilo (archivo csl) de la lista [Zotero] (https://www.zotero.org/styles) e inclúyalo en el YAML.
+
+```yaml
+---
+title: "Ejemplo"
+output:
+  html_document:
+bibliography: citations.bib
+csl: apa-5th-edition.csl
+---
+```
+
+- Por defecto la bibliografía aparece al final del documento pero puede desplazarse usando un código html div: `<div id="refs"></div>`
+
+- package `citr`
+
+- Después en el texto incluya [@Ref-1] o [@ref-1; @ref-2; @ref-3] para los paréntesis o @R-base para referirse a la entrada en el archivo. Pandoc generará automáticamente una referencia al final del documento.
+
+- Para incluir un título en la bibliografía que no ha sido citado en el documento, debe definir un campo nocite en la cabecera
+
+````
+---
+nocite: '@*'
 ---
 
 ---
 nocite: |
   @cit1, @cit2
----</code></pre>
-<p><br> <a href="https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html">Bibliographies and Citations</a></p>
-<hr />
-<p></br></p>
+---
+````
+
+<br>
+[Bibliographies and Citations](https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html)
+
+
+***
+
+</br>
+
+-->
 </div>
-<div id="convertir-un-script-en-una-presentación-.rmd" class="section level1" number="12">
-<h1 number="12"><span class="header-section-number">12</span> Convertir un script en una presentación .Rmd</h1>
+</div>
+<div id="convertir-script-a-reporte-.rmd" class="section level1" number="8">
+<h1 number="8"><span class="header-section-number">8</span> Convertir script a reporte <em>.Rmd</em></h1>
 <ul>
-<li>Es posible generar un documento de presentación directamente desde un archivo de script R en RStudio con la función <code>knitr::spin()</code> - (Ctrl / Cmd + Shift + K).</li>
-<li>Esta es una solución útil si no tiene mucho texto que añadir al análisis.</li>
-<li>Sin embargo, tendrá que aplicar una sintaxis particular a su archivo de script.</li>
-<li>También es posible hacer lo contrario y convertir un documento markdown en un script con <code>knit::purl</code>.</li>
+<li><p>Es posible generar un documento de presentación directamente desde un archivo de script R en RStudio con la función <code>knitr::spin()</code> - (Ctrl / Cmd + Shift + K).</p></li>
+<li><p>Esta es una solución útil si no tiene mucho texto que añadir al análisis.</p></li>
+<li><p>También es posible hacer lo contrario y convertir un documento markdown en un script con <code>knit::purl</code>.</p></li>
 </ul>
 <p><br></p>
 <ul>
@@ -829,35 +876,10 @@ nocite: |
 <hr />
 <p></br></p>
 </div>
-<div id="documento-word" class="section level1" number="13">
-<h1 number="13"><span class="header-section-number">13</span> Documento Word</h1>
-<p>Para crear un documento Word a partir de R Markdown, se especifica el formato <code>word_document</code> en la cabecera YAML del documento.</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Habits&quot;</span></span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> John Doe</span></span>
-<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> March 22, 2005</span></span>
-<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">word_document</span><span class="kw">:</span></span>
-<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">reference_docx</span><span class="kw">:</span><span class="at"> my-styles.docx</span></span>
-<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
-<ul>
-<li>Puede crear una <em>plantilla</em> <em>(documento de referencia de estilo</em>) para cambiar el diseño del documento de Word.</li>
-<li>Esta plantilla debe hacerce un documento Rmd con el formato word_document.</li>
-<li>A continuación, abra el documento en Word y edite los estilos y guárdelo con otro nombre como archivo `.docx’ y añádalo al YAML.</li>
-</ul>
-<p>Ver más en :</p>
-<ul>
-<li><a href="https://vimeo.com/110804387" class="uri">https://vimeo.com/110804387</a></li>
-<li><a href="https://bookdown.org/yihui/rmarkdown-cookbook/word-template.html" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/word-template.html</a></li>
-<li><a href="https://rmarkdown.rstudio.com/articles_docx.html" class="uri">https://rmarkdown.rstudio.com/articles_docx.html</a></li>
-</ul>
-<hr />
-<p></br></p>
-</div>
-<div id="páginas-web" class="section level1" number="14">
-<h1 number="14"><span class="header-section-number">14</span> Páginas web</h1>
-<div id="bookdown" class="section level2" number="14.1">
-<h2 number="14.1"><span class="header-section-number">14.1</span> Bookdown</h2>
+<div id="páginas-web" class="section level1" number="9">
+<h1 number="9"><span class="header-section-number">9</span> Páginas web</h1>
+<div id="bookdown" class="section level2" number="9.1">
+<h2 number="9.1"><span class="header-section-number">9.1</span> Bookdown</h2>
 <ul>
 <li><p>En RStudio: <em>File -&gt; New Project -&gt; New Directory -&gt; Book Project using bookdown</em></p></li>
 <li><p>Sirve para escribir documentos largos como un libro a partir de varios documentos R Markdown donde normalmente cada archivo es un capítulo.</p></li>
@@ -876,8 +898,8 @@ nocite: |
 <li><a href="https://eddjberry.netlify.com/post/writing-your-thesis-with-bookdown/">Escribir una tesis con bookdown</a></li>
 </ul>
 </div>
-<div id="blogdown" class="section level2" number="14.2">
-<h2 number="14.2"><span class="header-section-number">14.2</span> Blogdown</h2>
+<div id="blogdown" class="section level2" number="9.2">
+<h2 number="9.2"><span class="header-section-number">9.2</span> Blogdown</h2>
 <ul>
 <li><p>Sirve para crear páginas web. Puede ser utilizado para crear un bitacora de trabajos y publicarlos.</p></li>
 <li><p>Algunas páginas interesantes creadas con <em>blogdown</em>: <a href="https://yihui.org/">yihui.org</a>, <a href="https://simplystatistics.org/">simplystatistics.org</a>, <a href="https://www.datascienceblog.net/">datascienceblog.net</a></p></li>
@@ -886,11 +908,11 @@ nocite: |
 </ul>
 </div>
 </div>
-<div id="otros-lenguajes." class="section level1" number="15">
-<h1 number="15"><span class="header-section-number">15</span> Otros lenguajes.</h1>
+<div id="otros-lenguajes." class="section level1" number="10">
+<h1 number="10"><span class="header-section-number">10</span> Otros lenguajes.</h1>
 <p>Es poco conocido que R Markdown admite otros lneguajes de programación, como Python, Julia, C ++ y SQL entre otros. Para esto nos ayuda el paquete Knitr. Entre los lenguajes disponibles (knitr::knit_engines) están:</p>
 <p>Para usar un lenguaje diferente podemos cambiar el argumento en el encabezado de un bloque de código en r por un una de las siguientes alternativas.</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(knitr<span class="sc">::</span>knit_engines<span class="sc">$</span><span class="fu">get</span>())</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(knitr<span class="sc">::</span>knit_engines<span class="sc">$</span><span class="fu">get</span>())</span></code></pre></div>
 <pre><code>##  [1] &quot;awk&quot;       &quot;bash&quot;      &quot;coffee&quot;    &quot;gawk&quot;      &quot;groovy&quot;    &quot;haskell&quot;  
 ##  [7] &quot;lein&quot;      &quot;mysql&quot;     &quot;node&quot;      &quot;octave&quot;    &quot;perl&quot;      &quot;psql&quot;     
 ## [13] &quot;Rscript&quot;   &quot;ruby&quot;      &quot;sas&quot;       &quot;scala&quot;     &quot;sed&quot;       &quot;sh&quot;       
@@ -900,15 +922,20 @@ nocite: |
 ## [37] &quot;sql&quot;       &quot;go&quot;        &quot;python&quot;    &quot;julia&quot;     &quot;sass&quot;      &quot;scss&quot;     
 ## [43] &quot;R&quot;         &quot;bslib&quot;</code></pre>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="st">&#39;Hola desde python!&#39;</span></span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x.split(<span class="st">&#39; &#39;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="st">&#39;Hola desde python!&#39;</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x.split(<span class="st">&#39; &#39;</span>))</span></code></pre></div>
 <p>Nota: Para usar <code>python</code>, la librería <a href="https://rstudio.github.io/reticulate/">reticulate</a> es útil. Esta sirve para interactuar entre python y R. Esta librería ayudará a traducir los objetos de R a python y viceversa.</p>
 <p>Otras formas de incorporar python a R con reticulate son las siguientes:</p>
-<p><a href="https://rstudio.github.io/reticulate/#importing-python-modules">Importar módulos de Python</a> - La función import() permite importar cualquier módulo de Python y llamar a sus funciones directamente desde R.</p>
-<p><a href="https://rstudio.github.io/reticulate/#sourcing-python-scripts">Ejecutar scripts de Python</a> - Con la función source_python() permite ejecutar un script de Python similar a source() de un script de R. <!--(las funciones y objetos de Python definidos dentro del script se vuelven directamente disponibles para la sesión de R).--></p>
-<p><a href="https://rstudio.github.io/reticulate/#python-repl">Python REPL</a> - Permite acceder a una consola de python desde R. Los objetos que se creean en R estas disponibles en python y viceversa.</p>
-<div id="ejemplo-de-uso-de-python-en-rmarkdown" class="section level2" number="15.1">
-<h2 number="15.1"><span class="header-section-number">15.1</span> Ejemplo de uso de python en Rmarkdown:</h2>
+<ul>
+<li><p><a href="https://rstudio.github.io/reticulate/#importing-python-modules">Importar módulos de Python</a> - La función import() permite importar cualquier módulo de Python y llamar a sus funciones directamente desde R.</p></li>
+<li><p><a href="https://rstudio.github.io/reticulate/#sourcing-python-scripts">Ejecutar scripts de Python</a> - Con la función source_python() permite ejecutar un script de Python similar a source() de un script de R. <!--(las funciones y objetos de Python definidos dentro del script se vuelven directamente disponibles para la sesión de R).--></p></li>
+<li><p><a href="https://rstudio.github.io/reticulate/#python-repl">Python REPL</a> - Permite acceder a una consola de python desde R. Los objetos que se creean en R estas disponibles en python y viceversa.</p></li>
+</ul>
+<p><br></p>
+<ul>
+<li>Ejemplo de uso de python en Rmarkdown:</li>
+</ul>
+<p>Comenzamos con un chunk de R para cargar reticulate.</p>
 <pre><code>```{r}
 # Desde R carga la librería reticulate:
 library(reticulate)
@@ -933,22 +960,21 @@ py$z
 variable1 &lt;- (py$x + py$y)
 variable2  &lt;- py$z*variable1
 ```</code></pre>
-<p>Los objetos creados en R también pueden ser vistor en python:</p>
+<p>Los objetos creados en R también pueden ser vistos en python:</p>
 <pre><code>```{python}
 r.variable1
 r.variable2
 ```</code></pre>
 </div>
-</div>
-<div id="contenido-interactivo" class="section level1" number="16">
-<h1 number="16"><span class="header-section-number">16</span> Contenido interactivo</h1>
+<div id="contenido-interactivo" class="section level1" number="11">
+<h1 number="11"><span class="header-section-number">11</span> Contenido interactivo</h1>
 <p>Con R Markdown también podemos crear contenido interactivo. Hay dos tipos de documentos interactivos que podemos hacer con R Markdown: .</p>
 <ul>
 <li><a href="https://www.htmlwidgets.org/">HTML widgets</a> para incorporar visualizaciones a partir de librería que hacen uso de javascript.</li>
 <li><a href="https://shiny.rstudio.com/tutorial/">shiny</a> para crear aplicaciones web. Es una herramienta muy versatil. Aprender shiny es un tema amplio, pero podemos utilizar algunos elementos básicos y utilizarlos en Rmarkdown: <a href="https://bookdown.org/yihui/rmarkdown/shiny-documents.html">Rmarkdown + Shiny</a></li>
 </ul>
-<div id="html-widgets" class="section level2" number="16.1">
-<h2 number="16.1"><span class="header-section-number">16.1</span> HTML widgets</h2>
+<div id="html-widgets" class="section level2" number="11.1">
+<h2 number="11.1"><span class="header-section-number">11.1</span> HTML widgets</h2>
 <ul>
 <li><p>Se pueden crear diversas visualizaciones con los HTML widgets. Se pueden ver todos los widgets en la <a href="http://gallery.htmlwidgets.org/">gallería de HTML widgets</a>.</p></li>
 <li><p>Note que solo es posible tener la interactividad con documentos HTML. Si se crean archivos de otro tipo como pdf, word, no habrá elementos interactivos.</p></li>
@@ -971,28 +997,28 @@ m &lt;- leaflet() %&gt;%
 m  # Print the map
 ```</code></pre>
 <p><strong>Resultado: </strong></p>
-<div id="htmlwidget-f18f09932a531003bdd8" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-f18f09932a531003bdd8">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[-12.0196342,-77.0491277,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Aquí esta la FIEECS",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-12.0196342,-12.0196342],"lng":[-77.0491277,-77.0491277]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-c1109359356d3119373d" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c1109359356d3119373d">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[-12.0196342,-77.0491277,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Aquí esta la FIEECS",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-12.0196342,-12.0196342],"lng":[-77.0491277,-77.0491277]}},"evals":[],"jsHooks":[]}</script>
 <ul>
 <li>Para más detalles puedes revisar <a href="https://bookdown.org/yihui/rmarkdown/html-widgets.html">HTML widegts, tutorial de Rmarkdown.</a></li>
 </ul>
 </div>
-<div id="shiny-apps" class="section level2" number="16.2">
-<h2 number="16.2"><span class="header-section-number">16.2</span> Shiny apps</h2>
+<div id="shiny-apps" class="section level2" number="11.2">
+<h2 number="11.2"><span class="header-section-number">11.2</span> Shiny apps</h2>
 <p><a href="https://shiny.rstudio.com/">Shiny</a> sirve para crear aplicaciones web y es un tema amplio a cubrir pero con mucho potencial. Junto a RMarkdown podemos crear elementos Shiny embebidos en nuestros reportes con Rmarkdown.</p>
 <ul>
 <li><a href="https://bookdown.org/yihui/rmarkdown/shiny-documents.html">Rmarkdown + Shiny</a></li>
 </ul>
 <p>Para usar shiny en un documento markdown añadimos <code>runtime: shiny</code> al encabezado YAML:</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Shiny Document&quot;</span></span>
-<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> html_document</span></span>
-<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="fu">runtime</span><span class="kw">:</span><span class="at"> shiny</span></span>
-<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Shiny Document&quot;</span></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> html_document</span></span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a><span class="fu">runtime</span><span class="kw">:</span><span class="at"> shiny</span></span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
 </div>
 </div>
-<div id="cheatshets" class="section level1" number="17">
-<h1 number="17"><span class="header-section-number">17</span> Cheatshets</h1>
+<div id="cheatshets" class="section level1" number="12">
+<h1 number="12"><span class="header-section-number">12</span> Cheatshets</h1>
 <p>Existen diferentes archivos que resumen ((<em>Cheatsheet</em>)[<a href="https://www.rstudio.com/resources/cheatsheets/" class="uri">https://www.rstudio.com/resources/cheatsheets/</a>]) los códigos para utilizar en Rmarkdown.</p>
 <style>
 .resultado {
