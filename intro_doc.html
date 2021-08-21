@@ -714,17 +714,17 @@ Themes for slidify: https://codingclubuc3m.rbind.io/post/2019-09-24/
 
 ![](images/balisage.png)-->
 </div>
-<div id="sintaxis-básica-de-markdown" class="section level2" number="6.2">
-<h2 number="6.2"><span class="header-section-number">6.2</span> Sintaxis básica de Markdown</h2>
+<div id="sintaxis-básica-de-markdown" class="section level2 unnumbered">
+<h2 class="unnumbered">Sintaxis básica de Markdown</h2>
 <p><img src="images/Markdown_ejemplo.PNG" /></p>
 <p><a href="ejemplos/ejemplo_markdown.Rmd">Descargar muestra</a></p>
 <p><a href="https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">Guía de referencia</a></p>
 <p><a href="https://www.markdowntutorial.com/">Tutorial de Markdown</a></p>
 </div>
-<div id="formato" class="section level2" number="6.3">
-<h2 number="6.3"><span class="header-section-number">6.3</span> Formatear texto.</h2>
-<div id="negrita-y-cursiva" class="section level3" number="6.3.1">
-<h3 number="6.3.1"><span class="header-section-number">6.3.1</span> Negrita y Cursiva</h3>
+<div id="formato" class="section level2" number="6.2">
+<h2 number="6.2"><span class="header-section-number">6.2</span> Formatear texto.</h2>
+<div id="negrita-y-cursiva" class="section level3" number="6.2.1">
+<h3 number="6.2.1"><span class="header-section-number">6.2.1</span> Negrita y Cursiva</h3>
 <p>Podemos utilizar algunos símbolos alrededor de nuestro texto para resaltarlo con negrita o cursiva:</p>
 <p>Poner <code>*</code> entre el texto cambiará el estilo del texto a cursiva mientras que <code>**</code> cambiará nuestro texto a negritas:</p>
 <table>
@@ -755,8 +755,8 @@ En Rmd:                  Resultado
 
 -->
 </div>
-<div id="otros-elementos" class="section level3" number="6.3.2">
-<h3 number="6.3.2"><span class="header-section-number">6.3.2</span> Otros elementos:</h3>
+<div id="otros-elementos" class="section level3" number="6.2.2">
+<h3 number="6.2.2"><span class="header-section-number">6.2.2</span> Otros elementos:</h3>
 <p>Algunas otras opciones de personalización de texto incluyen los siguientes elementos:</p>
 <table>
 <thead>
@@ -802,10 +802,10 @@ En Rmd:                  Resultado
 </table>
 </div>
 </div>
-<div id="niveles" class="section level2 tabset" number="6.4">
-<h2 class="tabset" number="6.4"><span class="header-section-number">6.4</span> Diferentes niveles de texto.</h2>
-<div id="sec" class="section level3" number="6.4.1">
-<h3 number="6.4.1"><span class="header-section-number">6.4.1</span> Secciones</h3>
+<div id="niveles" class="section level2 tabset" number="6.3">
+<h2 class="tabset" number="6.3"><span class="header-section-number">6.3</span> Diferentes niveles de texto.</h2>
+<div id="sec" class="section level3" number="6.3.1">
+<h3 number="6.3.1"><span class="header-section-number">6.3.1</span> Secciones</h3>
 <p>Para crear titulos, utilizamos <code>#</code> al inicio del texto:</p>
 <p><code># Encabezado de primer nivel {-}</code><br />
 <code>## Encabezado de segundo nivel</code><br />
@@ -824,8 +824,8 @@ Pueden observar la estructura del documento con la siguiente opción:
 -->
 <hr />
 </div>
-<div id="listas" class="section level3" number="6.4.2">
-<h3 number="6.4.2"><span class="header-section-number">6.4.2</span> Crear listas</h3>
+<div id="listas" class="section level3" number="6.3.2">
+<h3 number="6.3.2"><span class="header-section-number">6.3.2</span> Crear listas</h3>
 <p>Utilizando el siguiente código:</p>
 <p><code>1. Primer item</code><br />
 <code>2. Segundo item</code><br />
@@ -846,8 +846,8 @@ Pueden observar la estructura del documento con la siguiente opción:
 <hr />
 </div>
 </div>
-<div id="expre" class="section level2" number="6.5">
-<h2 number="6.5"><span class="header-section-number">6.5</span> Expresiones matemáticas</h2>
+<div id="expre" class="section level2" number="6.4">
+<h2 number="6.4"><span class="header-section-number">6.4</span> Expresiones matemáticas</h2>
 <p>Para comenzar a utilizar la sintaxis de LaTeX dentro de un Rmd, utilizamos <code>$</code> y <code>$$</code>. Si deseamos escribir expresiones dentro de una línea de texto, usamos <code>$</code>, y para expresiones matemáticas en un nuevo párrafo usamos <code>$$</code></p>
 <p>Ejemplos:</p>
 Al utilizar el siguiente código (copiar y pegar el código en un Rmd).
@@ -902,7 +902,7 @@ Otra forma de hacer un CV en Rmd es con la librería [vitae.](https://github.com
 </ul>
 <p><br></p>
 <ol start="2" style="list-style-type: decimal">
-<li><strong>En el texto</strong> (<em>Inline R code</em>) que comienza con <code>r</code> y termina con un acento <code>``</code>.</li>
+<li><strong>En la linea de texto</strong> (<em>Inline R code</em>): comienza con <code>r</code> y termina con un acento <code>``</code>.</li>
 </ol>
 <p><strong>Código: </strong></p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>La edad media de nuestros participantes es <span class="in">`r mean(23, 65, 21, 22, 26)`</span></span></code></pre></div>
@@ -1004,15 +1004,29 @@ Texto en un bloque
 <ul>
 <li>Utilizar la base de datos de interés o esta base de datos sobre el <a href="/datos/breast-cancer.data">cancer</a>. Obtenido del repositorio <a href="https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)">UCI Machine Learning repository</a>.</li>
 <li>Utilizar negritas y cursivas para resaltar los resultados del análisis.</li>
-<li>Utilizar secciones para dividir el análisis de los datos. Ejemplo: sección lectura de datos, sección de exploración y sección de regresión.</li>
+<li>Utilizar títulos de nivel para crear secciones del análisis de los datos. Ejemplo: sección lectura de datos, sección de exploración y sección de regresión. De ser posible organizar el análisis usando también subsecciones (Títulos de nivel 2 y/o 3)</li>
 <li>Utilizar expresiones matemáticas en Rmd para mostrar la formula de alguna de las medidas de resumen que vaya a utilizar en el análisis.</li>
-<li>Utilizar chunks con códigos de R.</li>
+<li>Utilizar chunks con códigos de R. También, de ser posible utilizar códigos de r en líneas de texto.</li>
+<li>Configurar los códigos asociados a chunks que muestran imágenes o salidas demasiado largas no sean visibles.</li>
+<li>Configurar para que no se muestren advertencias (<em>warnings</em>) ni errores en los chunks del documento final.</li>
 </ul></li>
 </ul>
 <p><strong>Ejemplo:</strong></p>
 <ul>
 <li>Reporte en <a href="https://github.com/VilmaRomero/R-Ladies-Lima-rmarkdown/raw/master/reporte/Censo.pdf">pdf</a> realizado por <a href="https://vilmaromero.github.io/">Vilma Romero (RLadies Lima)</a>. El códido fuente está disponible en <a href="https://github.com/VilmaRomero/R-Ladies-Lima-rmarkdown/blob/master/reporte/Censo.Rmd">github</a>.</li>
 <li><a href="datos/Cap_100_Infraestructura%202017.sav">Datos del censo</a></li>
+</ul>
+<p><strong>Ayuda: </strong></p>
+<ul>
+<li>Si no sabes por donde empezar, replica primero el análisis del ejemplo. Para ello, sigue estos pasos:
+<ul>
+<li>Abre el repositorio en <a href="https://github.com/VilmaRomero/R-Ladies-Lima-rmarkdown/blob/master/reporte/Censo.Rmd">github</a>.</li>
+<li>Descarga el archivo Rmd o copia el contendo del archivo a un nuevo Rmd.</li>
+<li>Edita la dirección de los <a href="datos/Cap_100_Infraestructura%202017.sav">datos.</a> (Puede usar la URL o descargar los datos.)</li>
+<li>Remover la línea 10 correspondiente a la bibliografía. (Esto serviría para añadir una bibliografía como la utilizada en <span class="math inline">\(LaTex\)</span>)</li>
+<li>Compilar y crear el documento Knit. Nota: Necesitarás tener <code>TinyTex</code> instalado. Si no lo tienes, cambiar el output del documento a <code>html_document</code>.</li>
+<li>Editar el documento: cambiar título, nombre, fecha, y edita el contenido de las secciones con un análisis descriptivos de los datos sobre el <a href="">cancer</a>. Alternativamente, si deseas puede usar tu propio dataset.)</li>
+</ul></li>
 </ul>
 <p><br></p>
 </div>
@@ -1049,6 +1063,12 @@ Texto en un bloque
 <li><a href="https://app.netlify.com/drop">Netlify</a></li>
 <li><a href="https://resources.github.com/whitepapers/github-and-rstudio/">Github</a></li>
 </ul>
+<div id="ejercicio-5" class="section level3" number="8.2.1">
+<h3 number="8.2.1"><span class="header-section-number">8.2.1</span> <strong>Ejercicio 5</strong> 👩‍💻 👨‍💻</h3>
+<ul>
+<li>Publicar el análisis en Rpubs.</li>
+</ul>
+</div>
 </div>
 </div>
 
