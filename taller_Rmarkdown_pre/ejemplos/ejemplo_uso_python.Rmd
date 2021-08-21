@@ -1,0 +1,46 @@
+---
+title: "Ejemplo python - 1"
+author: "Autor"
+date: "8/18/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+# Desde R carga la librería reticulate:
+library(reticulate)
+# Si tienen python ya inslado en sus computadoras, aquí pueden poner su directorio. Sino, usará una versión instalada por reticulate. 
+use_python("C:/Users/EvelynG/AppData/Local/Programs/Python/Python37/python.exe", required=T)
+```
+
+Luego, podemos usar python.
+
+```{python}
+import numpy as np
+x = 5
+y = 7 
+z = np.pi
+```
+Y obtener los valores en R:
+
+```{r}
+# Ver valores de x,y y z creados en python: 
+py$x
+py$y
+py$z
+
+# Hacer calculos con ellos:
+variable1 <- (py$x + py$y)
+variable2  <- py$z*variable1
+```
+Los objetos creados en R también pueden ser vistor en python:
+
+
+```python
+r.variable1
+r.variable2
+``` 

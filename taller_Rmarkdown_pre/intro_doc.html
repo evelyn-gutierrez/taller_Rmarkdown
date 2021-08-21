@@ -1,81 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
- "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+
+<html>
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
-  <meta name="generator" content="pandoc" />
-  <meta name="author" content="Evelyn Gutierrez" />
-  <meta name="copyright" content="Evelyn Gutierrez, egutierreza@pucp.edu.pe"/>
-  <title>Taller de RMarkdown</title>
-  <style type="text/css">
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-            pre > code.sourceCode { white-space: pre; position: relative; }
-            pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-            pre > code.sourceCode > span:empty { height: 1.2em; }
-            .sourceCode { overflow: visible; }
-            code.sourceCode > span { color: inherit; text-decoration: inherit; }
-            div.sourceCode { margin: 1em 0; }
-            pre.sourceCode { margin: 0; }
-            @media screen {
-            div.sourceCode { overflow: auto; }
-            }
-            @media print {
-            pre > code.sourceCode { white-space: pre-wrap; }
-            pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-            }
-            pre.numberSource code
-              { counter-reset: source-line 0; }
-            pre.numberSource code > span
-              { position: relative; left: -4em; counter-increment: source-line; }
-            pre.numberSource code > span > a:first-child::before
-              { content: counter(source-line);
-                position: relative; left: -1em; text-align: right; vertical-align: baseline;
-                border: none; display: inline-block;
-                -webkit-touch-callout: none; -webkit-user-select: none;
-                -khtml-user-select: none; -moz-user-select: none;
-                -ms-user-select: none; user-select: none;
-                padding: 0 4px; width: 4em;
-                color: #aaaaaa;
-              }
-            pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-            div.sourceCode
-              {   }
-            @media screen {
-            pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-            }
-            code span.al { color: #ff0000; } /* Alert */
-            code span.an { color: #008000; } /* Annotation */
-            code span.at { } /* Attribute */
-            code span.bu { } /* BuiltIn */
-            code span.cf { color: #0000ff; } /* ControlFlow */
-            code span.ch { color: #008080; } /* Char */
-            code span.cn { } /* Constant */
-            code span.co { color: #008000; } /* Comment */
-            code span.cv { color: #008000; } /* CommentVar */
-            code span.do { color: #008000; } /* Documentation */
-            code span.er { color: #ff0000; font-weight: bold; } /* Error */
-            code span.ex { } /* Extension */
-            code span.im { } /* Import */
-            code span.in { color: #008000; } /* Information */
-            code span.kw { color: #0000ff; } /* Keyword */
-            code span.op { } /* Operator */
-            code span.ot { color: #ff4000; } /* Other */
-            code span.pp { color: #ff4000; } /* Preprocessor */
-            code span.sc { color: #008080; } /* SpecialChar */
-            code span.ss { color: #008080; } /* SpecialString */
-            code span.st { color: #008080; } /* String */
-            code span.va { } /* Variable */
-            code span.vs { color: #008080; } /* VerbatimString */
-            code span.wa { color: #008000; font-weight: bold; } /* Warning */
-          </style>
-  <style type="text/css">
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Evelyn Gutierrez" />
+
+
+<title>Taller de RMarkdown</title>
+
+<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+<style type="text/css">
+  code {
+    white-space: pre;
+  }
+  .sourceCode {
+    overflow: visible;
+  }
+</style>
+<style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -134,44 +114,338 @@ code span.st { color: #008080; } /* String */
 code span.va { } /* Variable */
 code span.vs { color: #008080; } /* VerbatimString */
 code span.wa { color: #008000; font-weight: bold; } /* Warning */
-  </style>
-  <script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
-  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
-  <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-  <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-  <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-  <style>h1 {font-size: 34px;}
-         h1.title {font-size: 38px;}
-         h2 {font-size: 30px;}
-         h3 {font-size: 24px;}
-         h4 {font-size: 18px;}
-         h5 {font-size: 16px;}
-         h6 {font-size: 12px;}
-         code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
-         pre:not([class]) { background-color: white }</style>
-  <link href="site_libs/slidy-2/styles/slidy.css" rel="stylesheet" />
-  <script src="site_libs/slidy-2/scripts/slidy.js"></script>
-  <script src="site_libs/slidy_shiny-1/slidy_shiny.js"></script>
-  <meta name="duration" content="5" />
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+
+<link rel="stylesheet" href="css/sfah.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
 </head>
+
 <body>
-<div class="slide titlepage">
-  <h1 class="title">Taller de RMarkdown</h1>
-  <p class="author">
-Evelyn Gutierrez
-  </p>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
 </div>
-<div id="objetivos" class="slide section level1">
-<h1>Objetivos</h1>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Introducción
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="index.html">Presentación Intro</a>
+    </li>
+    <li>
+      <a href="intro_doc.html">Guia: Introducción a Rmd</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="personalizar.html">Guia: Personalizar Rmd</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Taller de RMarkdown</h1>
+<h4 class="author">Evelyn Gutierrez</h4>
+
+</div>
+
+
+<div id="objetivos" class="section level1" number="1">
+<h1 number="1"><span class="header-section-number">1</span> Objetivos</h1>
 <!-- 
 Themes for slidify: https://codingclubuc3m.rbind.io/post/2019-09-24/
 
 -->
-<div style="position: fixed; top: 20; right: 0;">
-<p><img src="images/rmarkdown.png" style="width:50.0%" /></p>
+<!--<div style="position: fixed; top: 20; right: 0;">
+![](images/rmarkdown.png){width=50%}
+
 </div>
+-->
 <ul>
 <li><p>Familiarizarse con el entorno de RStudio para crear reportes.</p></li>
 <li><p>Comprender la estructura de un documento R Markdown.</p></li>
@@ -193,8 +467,10 @@ Themes for slidify: https://codingclubuc3m.rbind.io/post/2019-09-24/
 
 -->
 </div>
-<div id="lo-que-necesitamos-como-mínimo" class="slide section level1">
-<h1>Lo que necesitamos (como mínimo)</h1>
+<div id="requerimientos" class="section level1" number="2">
+<h1 number="2"><span class="header-section-number">2</span> Requerimientos</h1>
+<div id="lo-que-necesitamos-como-mínimo" class="section level2" number="2.1">
+<h2 number="2.1"><span class="header-section-number">2.1</span> Lo que necesitamos (como mínimo)</h2>
 <p><br></p>
 <ul>
 <li><a href="https://cran.r-project.org/bin/windows/base/">R</a></li>
@@ -207,8 +483,8 @@ Themes for slidify: https://codingclubuc3m.rbind.io/post/2019-09-24/
 </ul></li>
 </ul>
 </div>
-<div id="rstudio" class="slide section level1">
-<h1><strong>RStudio</strong></h1>
+<div id="rstudio" class="section level2" number="2.2">
+<h2 number="2.2"><span class="header-section-number">2.2</span> <strong>RStudio</strong></h2>
 <p><br></p>
 <ul>
 <li>La interfaz básica de <strong>R</strong> no es muy intuitiva. Por esta razón no se usa mucho y se prefiere un <em>IDE</em>.</li>
@@ -223,8 +499,8 @@ Themes for slidify: https://codingclubuc3m.rbind.io/post/2019-09-24/
 <li>Los comandos y funciones son los mismos para <strong>R</strong> y <strong>RStudio</strong>.</li>
 </ul>
 </div>
-<div id="instalación" class="slide section level1">
-<h1>Instalación</h1>
+<div id="instalación" class="section level2" number="2.3">
+<h2 number="2.3"><span class="header-section-number">2.3</span> Instalación</h2>
 <ol style="list-style-type: decimal">
 <li><p>Descargar e instalar <a href="https://cran.r-project.org/"><strong>R básico</strong></a> - Elija su sistema operativo y siga los pasos.</p></li>
 <li><p>Descargar e instalar <a href="https://www.rstudio.com/products/rstudio/download/#download"><strong>RStudio</strong></a> (u otra interfaz) - Elija la versión gratuita y su sistema operativo.</p></li>
@@ -246,9 +522,8 @@ Themes for slidify: https://codingclubuc3m.rbind.io/post/2019-09-24/
     + Algunas utilidades más especializadas pueden requerir la instalación de herramientas adicionales como [*RTools* (Windows) y *LaTeX*](http://cran.r-project.org/doc/manuals/R-admin.html#The-Windows-toolset).
     + Paquete útil para actualizar R y otras herramientas en Windows a través de RStudio: `installr`.
 -->
-</div>
-<div id="qué-es-un-paquete-o-package" class="slide section level1">
-<h1>¿Qué es un paquete o <em>package</em>?</h1>
+<div id="qué-es-un-paquete-o-package" class="section level3" number="2.3.1">
+<h3 number="2.3.1"><span class="header-section-number">2.3.1</span> ¿Qué es un paquete o <em>package</em>?</h3>
 <p><br></p>
 <ul>
 <li><p>Un <em>paquete</em> es un módulo (o extensión, biblioteca) que contiene un conjunto de funciones (a menudo relacionadas con un método o dominio particular)</p></li>
@@ -260,8 +535,24 @@ Themes for slidify: https://codingclubuc3m.rbind.io/post/2019-09-24/
 <li><p>Los paquetes también deben actualizarse periódicamente. Esto se puede realizar a través de: <em>Tools&gt;Check for package updates…</em>.</p></li>
 </ul>
 </div>
-<div id="qué-es-r-markdown-y-por-qué-utilizarlo" class="slide section level1">
-<h1>¿Qué es R Markdown y por qué utilizarlo?</h1>
+</div>
+</div>
+<div id="fundamentos-rmarkdown" class="section level1" number="3">
+<h1 number="3"><span class="header-section-number">3</span> Fundamentos RMarkdown</h1>
+<div id="motivación---ejemplos-rmd" class="section level2" number="3.1">
+<h2 number="3.1"><span class="header-section-number">3.1</span> Motivación - Ejemplos Rmd</h2>
+<p>Multiples opciones de publicaciones con RMarkdown:</p>
+<ul>
+<li>Esta página web.</li>
+<li>Repositorio de conocimientos <a href="https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1392362?journalCode=utas20">Aibnb.</a></li>
+<li>Tareas académicas en <a href="https://rpubs.com/">Rpubs</a>.</li>
+<li>Correos personalizados <a href="https://rmarkdown.rstudio.com/articles_mail_merge.html">Mine Çetinkaya-Rundel</a>.</li>
+<li>Encuesta sobre beneficios de salud para empleadores de <a href="https://www.kff.org/health-costs/report/2017-employer-health-benefits-survey/">2017.</a></li>
+<li>Dashboards en <a href="https://www.eelloo.nl/wp-content/uploads/2017/08/infographic_Voorbeelden-infographics-Overzicht.pdf">eelloo</a>.</li>
+</ul>
+</div>
+<div id="qué-es-r-markdown" class="section level2" number="3.2">
+<h2 number="3.2"><span class="header-section-number">3.2</span> ¿Qué es R Markdown ?</h2>
 <!--![](images/r-m.png)-->
 <blockquote>
 <p>R + Markdown = RMarkdown</p>
@@ -273,19 +564,23 @@ Themes for slidify: https://codingclubuc3m.rbind.io/post/2019-09-24/
 <li><p>Está optimizado para la creación de documentos html (formato que se beneficia de las opciones más interesantes).</p></li>
 </ul>
 </div>
-<div id="qué-es-r-markdown-y-por-qué-utilizarlo-1" class="slide section level1 unnumbered">
-<h1 class="unnumbered">¿Qué es R Markdown y por qué utilizarlo?</h1>
+<div id="beneficios-de-usar-rmarkdown" class="section level2" number="3.3">
+<h2 number="3.3"><span class="header-section-number">3.3</span> Beneficios de usar RMarkdown</h2>
+<p>Los beneficios de usar RMarkdown:</p>
+<ul>
+<li>Simple y sencillo: Crear contenido web es rápido y cómodo.</li>
+<li>A prueba de errores: Difícil cometer errores de sintaxis.</li>
+<li>Minimalista: Es perfecto para usarlo con editores de texto minimalistas.</li>
+<li>Versátil: Permite desarrollar análisis de datos y redactar un informe a la vez.</li>
+</ul>
 <p><img src="images/formatexport.png" style="width:80.0%" /></p>
 </div>
-<div id="cómo-funciona" class="slide section level1">
-<h1>¿Cómo funciona?</h1>
+<div id="cómo-funciona" class="section level2" number="3.4">
+<h2 number="3.4"><span class="header-section-number">3.4</span> ¿Cómo funciona?</h2>
 <p>R Markdown combina diferentes procesos para crear documentos en diferentes formatos a partir de un único archivo:</p>
 <center>
 <p><img src="images/workflow.png" style="width:75.0%" /></p>
 </center>
-</div>
-<div id="cómo-funciona-1" class="slide section level1 unnumbered">
-<h1 class="unnumbered">¿Cómo funciona?</h1>
 <ul>
 <li><p>Todo comienza con la creación de un documento <strong>.Rmd</strong> en RStudio. Un archivo R Markdown es un simple archivo de texto con una extensión .Rmd (puede crearlo en el Bloc de notas).</p></li>
 <li><p>Para generar un reporte, en RStudio utilice el botón knit que activa la función <code>rmarkdown::render()</code> y ejecuta los bloques de código en el archivo <strong>.Rmd</strong> para incluirlos en el documento final. Estos resultados se convierten en un archivo temporal .md (que contiene el código y los resultados).</p></li>
@@ -300,14 +595,17 @@ Themes for slidify: https://codingclubuc3m.rbind.io/post/2019-09-24/
 <!-- 
 - Tenga en cuenta que *LaTeX* es una herramienta muy poderosa para estructurar documentos, pero esta personalización específica para pdf significa que se pierde la flexibilidad multiformato de Markdown.-->
 </div>
-<div id="cómo-creo-un-nuevo-rmd" class="slide section level1 unnumbered">
-<h1 class="unnumbered">¿Cómo creo un nuevo Rmd?</h1>
+<div id="cómo-creo-un-nuevo-rmd" class="section level2 unnumbered">
+<h2 class="unnumbered">¿Cómo creo un nuevo Rmd?</h2>
 <p>Creación de un Rmd en RStudio 🐣:</p>
 <p><img src="images/crear_mkd.png" style="width:40.0%" /></p>
 <p>👩‍💻 👨‍💻 Ejercicio 1: Crear y compilar un Rmd</p>
 </div>
-<div id="formatos-de-salida" class="slide section level1">
-<h1>Formatos de salida</h1>
+</div>
+<div id="formatos-de-salida" class="section level1" number="4">
+<h1 number="4"><span class="header-section-number">4</span> Formatos de salida</h1>
+<div id="formatos-básicos" class="section level2" number="4.1">
+<h2 number="4.1"><span class="header-section-number">4.1</span> Formatos básicos</h2>
 <ol style="list-style-type: decimal">
 <li><strong>Formatos de documentos:</strong>
 <ul>
@@ -329,17 +627,14 @@ Themes for slidify: https://codingclubuc3m.rbind.io/post/2019-09-24/
 <li>powerpoint_presentation</li>
 </ul></li>
 </ol>
-</div>
-<div id="formatos-de-salida-1" class="slide section level1 unnumbered">
-<h1 class="unnumbered">Formatos de salida</h1>
 <p><strong>Opcional:</strong> Para crear archivos PDF utilizando RMarkdown, necesitaremos tener instalado una distribución de LaTeX. Si no tienes instalado LateX, recomendamos instalar <a href="https://yihui.org/tinytex/">TinyTeX</a>.</p>
 <p>En la consola de R, utilizar lo siguiente:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&#39;tinytex&#39;</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>()  <span class="co"># Instala TinyTeX</span></span></code></pre></div>
 <p>TinyTex es una distribución ligera de LaTex. Sin embargo, esta instalación podría demorar según tu conexión a internet.</p>
 </div>
-<div id="formatos-de-salida-2" class="slide section level1 unnumbered">
-<h1 class="unnumbered">Formatos de salida</h1>
+<div id="otros-formatos---plantillas" class="section level2" number="4.2">
+<h2 number="4.2"><span class="header-section-number">4.2</span> Otros formatos - Plantillas</h2>
 <p>Hay un gran número de <em>paquetes</em> y <em>plantillas</em> para crear diferentes tipos de documentos con una amplia variedad de estilos predefinidos: plantillas de presentación, artículos periodísticos, libros, tesis, sitios web, blogs, widgets, cuadros de mando, mapas y otras presentaciones interactivas…</p>
 <ul>
 <li><p>Ver <a href="https://rmarkdown.rstudio.com/gallery.html">galeria</a></p></li>
@@ -359,8 +654,11 @@ Themes for slidify: https://codingclubuc3m.rbind.io/post/2019-09-24/
 </ul>
 <p>👩‍💻 👨‍💻 Ejercicio 2: añadir un tema de <a href="https://github.com/yixuan/prettydoc/">prettydoc</a> al Rmd.</p>
 </div>
-<div id="estructura-de-un-documento-rmarkdown" class="slide section level1">
-<h1>Estructura de un documento RMarkdown</h1>
+</div>
+<div id="estructura-de-un-documento-rmarkdown" class="section level1" number="5">
+<h1 number="5"><span class="header-section-number">5</span> Estructura de un documento RMarkdown</h1>
+<div id="partes" class="section level2" number="5.1">
+<h2 number="5.1"><span class="header-section-number">5.1</span> Partes</h2>
 <p>Contiene 3 partes:</p>
 <ol style="list-style-type: decimal">
 <li>Un encabezado de metadatos (<em>encabezado YAML</em>): encabezado escrito en <a href="https://en.wikipedia.org/wiki/YAML"><strong>YAML</strong></a> rodeado por 3 guiones.</li>
@@ -368,13 +666,10 @@ Themes for slidify: https://codingclubuc3m.rbind.io/post/2019-09-24/
 <li>Bloques de código: <em>códigos</em> encerrados entre triple tilde invertida (acentos agudos) ```` (Para crearlos rapidamente se puede usar <em>ctrl +alt + i</em>).</li>
 </ol>
 <p><img src="images/estructura.png" style="width:75.0%" /></p>
-</div>
-<div id="estructura-de-un-documento-rmarkdown-1" class="slide section level1 unnumbered">
-<h1 class="unnumbered">Estructura de un documento RMarkdown</h1>
 <p><img src="images/bloques.png" style="width:85.0%" /></p>
 </div>
-<div id="metadatos" class="slide section level1">
-<h1>Metadatos</h1>
+<div id="metadatos" class="section level2" number="5.2">
+<h2 number="5.2"><span class="header-section-number">5.2</span> Metadatos</h2>
 <ul>
 <li>Metadatos básicos y campos de Ouput para definir el formato y sus opciones para configurar la presentación final</li>
 <li>Sintaxis <a href="https://en.wikipedia.org/wiki/YAML">YAML</a></li>
@@ -386,14 +681,16 @@ Themes for slidify: https://codingclubuc3m.rbind.io/post/2019-09-24/
 <li>Si un formato de salida es proporcionado por un paquete en específico, debe ser nombrado en el campo YAML <code>output: tufte::tufte_html</code>.</li>
 </ul>
 </div>
-<div id="metadatos-1" class="slide section level1 unnumbered">
-<h1 class="unnumbered">Metadatos</h1>
+<div id="editar-metadatos" class="section level2" number="5.3">
+<h2 number="5.3"><span class="header-section-number">5.3</span> Editar metadatos</h2>
 <p>También es posible controlar el formato del documento final utilizando las opciones del menú <strong>knit</strong> de RStudio. El encabezado YAML se modificarán automáticamente.</p>
 <p><img src="images/options.png" /></p>
 </div>
-<div id="texto-con-formato-markdown" class="slide section level1">
-<h1>Texto con formato Markdown</h1>
-<h2 id="sobre-markdown">Sobre Markdown</h2>
+</div>
+<div id="markdown" class="section level1" number="6">
+<h1 number="6"><span class="header-section-number">6</span> Markdown</h1>
+<div id="conocer-markdown." class="section level2" number="6.1">
+<h2 number="6.1"><span class="header-section-number">6.1</span> Conocer Markdown.</h2>
 <ul>
 <li><p><a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> es un lenguaje de marcado, una versión simplificada de html, creado por John Gruber en 2004.</p></li>
 <li><p>Se utiliza para estructurar contenidos textuales y producir documentos a partir de texto plano etiquetado.</p></li>
@@ -418,14 +715,167 @@ Themes for slidify: https://codingclubuc3m.rbind.io/post/2019-09-24/
 
 ![](images/balisage.png)-->
 </div>
-<div id="texto-con-formato-markdown-1" class="slide section level1 unnumbered">
-<h1 class="unnumbered">Texto con formato Markdown</h1>
-<h2 id="sintaxis-básica-de-markdown">Sintaxis básica de Markdown</h2>
+<div id="sintaxis-básica-de-markdown" class="section level2" number="6.2">
+<h2 number="6.2"><span class="header-section-number">6.2</span> Sintaxis básica de Markdown</h2>
 <p><img src="images/Markdown_ejemplo.PNG" /></p>
 <p><a href="ejemplos/ejemplo_markdown.Rmd">Descargar muestra</a></p>
 <p><a href="https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">Guía de referencia</a></p>
 <p><a href="https://www.markdowntutorial.com/">Tutorial de Markdown</a></p>
-<p>👩‍💻 👨‍💻 Ejercicio: Crear un modelo de reporte con las secciones que debes tener para un análisis exploratorio. Por ejemplo: Lectura de datos, Análisis exploratorio univariado, y análisis exploratorio multivariado. Puedes ser creativo con los nombres.</p>
+</div>
+<div id="formato" class="section level2" number="6.3">
+<h2 number="6.3"><span class="header-section-number">6.3</span> Formatear texto.</h2>
+<div id="negrita-y-cursiva" class="section level3" number="6.3.1">
+<h3 number="6.3.1"><span class="header-section-number">6.3.1</span> Negrita y Cursiva</h3>
+<p>Podemos utilizar algunos símbolos alrededor de nuestro texto para resaltarlo con negrita o cursiva:</p>
+<p>Poner <code>*</code> entre el texto cambiará el estilo del texto a cursiva mientras que <code>**</code> cambiará nuestro texto a negritas:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">En Rmd:</th>
+<th align="center">Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>*Cursiva*</code></td>
+<td align="center"><em>Cursiva</em></td>
+</tr>
+<tr class="even">
+<td align="left"><code>**Negrita**</code></td>
+<td align="center"><strong>Negrita</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="color-al-texto" class="section level3" number="6.3.2">
+<h3 number="6.3.2"><span class="header-section-number">6.3.2</span> Color al texto:</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">En Rmd:</th>
+<th align="left">Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>\textcolor{rojo}{red}</code></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><code>\textcolor{azul}{blue}</code></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p>Ejemplo:</p>
+Las rosas son *
+<style color="red">
+rojas
+</div>
+<p>*(en cursiva) y el cielo es <strong></strong>(en negrita).</p>
+</div>
+<div id="otros-elementos" class="section level3" number="6.3.3">
+<h3 number="6.3.3"><span class="header-section-number">6.3.3</span> Otros elementos:</h3>
+<p>Algunas otras opciones de personalización de texto incluyen los siguientes elementos:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Elemento</th>
+<th align="left">En Rmd:</th>
+<th align="left">Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Subindice</td>
+<td align="left"><code>H~2~O</code></td>
+<td align="left">H<sub>2</sub>O</td>
+</tr>
+<tr class="even">
+<td align="left">Superindice</td>
+<td align="left"><code>E=mc^2^</code></td>
+<td align="left">E=mc<sup>2</sup></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Elem.</th>
+<th align="center">En Rmd:</th>
+<th align="left">Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">URL</td>
+<td align="center"><code>[FIEECS](https://fieecs.uni.edu.pe/)</code></td>
+<td align="left"><a href="https://fieecs.uni.edu.pe/">FIEECS</a></td>
+</tr>
+<tr class="even">
+<td align="left">Imagen</td>
+<td align="center"><code>![RStudio](RStudio-icon.png)</code></td>
+<td align="left"><img src="img/RStudio-icon.png" id="id" class="class" width="20" alt="RStudio" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="niveles" class="section level2 tabset" number="6.4">
+<h2 class="tabset" number="6.4"><span class="header-section-number">6.4</span> Diferentes niveles de texto.</h2>
+<div id="sec" class="section level3" number="6.4.1">
+<h3 number="6.4.1"><span class="header-section-number">6.4.1</span> Secciones</h3>
+<p>Para crear titulos, utilizamos <code>#</code> al inicio del texto:</p>
+<p><code># Encabezado de primer nivel {-}</code><br />
+<code>## Encabezado de segundo nivel</code><br />
+<code>### Encabezado de tercer nivel</code><br />
+</p>
+<!-- 
+### Estructura del documento (Outline) {#outline}
+
+ 
+Pueden observar la estructura del documento con la siguiente opción:
+
+<center>
+![](img/outline.png){#id .class width=150px}
+</center>
+
+-->
+<hr />
+</div>
+<div id="listas" class="section level3" number="6.4.2">
+<h3 number="6.4.2"><span class="header-section-number">6.4.2</span> Crear listas</h3>
+<p>Utilizando el siguiente código:</p>
+<p><code>1. Primer item</code><br />
+<code>2. Segundo item</code><br />
+<code>3. Tercer item</code><br />
+<code>- un item sin numeración</code><br />
+<code>- otro item sin numeración</code><br />
+</p>
+<p>Obtenemos lo siguiente:</p>
+<ol style="list-style-type: decimal">
+<li>Primer item.</li>
+<li>Segundo item.</li>
+<li>Tercer item.
+<ul>
+<li>un item sin numeración.</li>
+<li>otro item sin numeración.</li>
+</ul></li>
+</ol>
+<hr />
+</div>
+</div>
+<div id="expre" class="section level2" number="6.5">
+<h2 number="6.5"><span class="header-section-number">6.5</span> Expresiones matemáticas</h2>
+<p>Para comenzar a utilizar la sintaxis de LaTeX dentro de un Rmd, utilizamos <code>$</code> y <code>$$</code>. Si deseamos escribir expresiones dentro de una línea de texto, usamos <code>$</code>, y para expresiones matemáticas en un nuevo párrafo usamos <code>$$</code></p>
+<p>Ejemplos:</p>
+Al utilizar el siguiente código (copiar y pegar el código en un Rmd).
+<center>
+<code>$$f(k) = {n \choose k} p^{k} (1-p)^{n-k}$$</code>
+</center>
+<p>Se obtendrá el siguiente resultado:</p>
+<p><span class="math display">\[f(k) = {n \choose k} p^{k} (1-p)^{n-k}\]</span></p>
+<p>Más sobre expresiones matemáticas en la <a href="https://bookdown.org/yihui/rmarkdown/markdown-syntax.html#math-expressions">guía oficial</a></p>
 <!--
 # Ejercicio 2 {-}
 
@@ -445,9 +895,11 @@ Comenzar a hacer un CV en Rmd con la librería
 
 Otra forma de hacer un CV en Rmd es con la librería [vitae.](https://github.com/mitchelloharawild/vitae). Para esto necesitarás tener instalado $LaTex$ o instalar [Tinytex](https://yihui.org/tinytex/)
 -->
+<p>👩‍💻 👨‍💻 Ejercicio: Crear un modelo de reporte con las secciones que debes tener para un análisis exploratorio. Por ejemplo: Lectura de datos, Análisis exploratorio univariado, y análisis exploratorio multivariado. Puedes ser creativo con los nombres. - Negritas y cursivas. - Añadir logo - Añadir imagen de RStudio.</p>
 </div>
-<div id="códigos-de-r-chunks" class="slide section level1">
-<h1>Códigos de R (Chunks)</h1>
+</div>
+<div id="códigos-de-r-chunks" class="section level1" number="7">
+<h1 number="7"><span class="header-section-number">7</span> Códigos de R (Chunks)</h1>
 <p>El código R puede incluirse de dos maneras:</p>
 <p><br></p>
 <ol style="list-style-type: decimal">
@@ -468,9 +920,8 @@ Otra forma de hacer un CV en Rmd es con la librería [vitae.](https://github.com
 <div class="sourceCode" id="cb7"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>La edad media de nuestros participantes es <span class="in">`r mean(23, 65, 21, 22, 26)`</span></span></code></pre></div>
 <p><strong>Resultados</strong>:</p>
 <p>La edad media de nuestros participantes es 23.</p>
-</div>
-<div id="códigos-de-r-ejemplo" class="slide section level1">
-<h1>Códigos de R (Ejemplo)</h1>
+<div id="ejemplo-diamantes" class="section level2" number="7.1">
+<h2 number="7.1"><span class="header-section-number">7.1</span> Ejemplo: diamantes</h2>
 <!--<div class='left' style='float:left;width:48%'>-->
 <p><strong>Texto Markdown</strong></p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
@@ -505,12 +956,11 @@ Otra forma de hacer un CV en Rmd es con la librería [vitae.](https://github.com
 <!--</div>-->
 <p><br> <br> <br></p>
 </div>
-<div id="código-r" class="slide section level1">
-<h1>Código R</h1>
-<h2 id="configuración-de-chunks.">Configuración de <em>chunks</em>.</h2>
+<div id="configuración-de-chunks." class="section level2" number="7.2">
+<h2 number="7.2"><span class="header-section-number">7.2</span> Configuración de <em>chunks</em>.</h2>
 <ul>
 <li><p>El “comportamiento” de los bloques de código y la presentación de los resultados pueden configurarse de varias maneras.</p></li>
-<li><p>Knitr ofrece muchas<a href="https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">opciones</a> (<em>chunck options</em>) que pueden añadirse como argumentos entre las llaves de cada bloque (cada opción debe estar separada por una coma).</p></li>
+<li><p>Knitr ofrece muchas <a href="https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">opciones</a> (<em>chunck options</em>) que pueden añadirse como argumentos entre las llaves de cada bloque (cada opción debe estar separada por una coma).</p></li>
 </ul>
 <div class="sourceCode" id="cb9"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, chunk-label, results=&#39;hide&#39;, fig.height=4}</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
@@ -522,13 +972,9 @@ Otra forma de hacer un CV en Rmd es con la librería [vitae.](https://github.com
 </ul>
 <p><img src="images/global.png" /></p>
 </div>
-<div id="código-r-1" class="slide section level1 unnumbered">
-<h1 class="unnumbered">Código R</h1>
-<h2 id="configuración-del-funcionamiento-de-los-bloques-de-código">Configuración del funcionamiento de los bloques de código</h2>
+<div id="configuración-de-chunks" class="section level2" number="7.3">
+<h2 number="7.3"><span class="header-section-number">7.3</span> Configuración de chunks</h2>
 <p><img src="images/chunks.png" style="width:70.0%" /></p>
-</div>
-<div id="código-r-2" class="slide section level1">
-<h1>Código R</h1>
 <!--
 - Para presentar y subrayar fragmentos de código sin ejecutarlos, como si fueran texto, insértelos entre 2 tildes (acento grave):
 
@@ -552,16 +998,38 @@ Texto en un bloque
 
 <br>
 -->
-<p><strong>Algunos detalles finales: </strong></p>
+</div>
+<div id="otros-detalles" class="section level2" number="7.4">
+<h2 number="7.4"><span class="header-section-number">7.4</span> Otros detalles:</h2>
 <ul>
 <li><p>Es mejor añadir una línea en blanco entre diferentes elementos, como un título y un párrafo.</p></li>
 <li><p>Para hacer un salto de línea: termine la línea con dos espacios + Enter.</p></li>
 <li><p>Para añadir espacios adicionales entre líneas/secciones, utilice la etiqueta html: <code>&lt;br&gt;</code>.</p></li>
 <li><p>Para incluir comentarios que no saldrán en el documento final, utilice comentarios en html: <code>&lt;!-- Esto es un comentario --&gt;</code>.</p></li>
 </ul>
+<div id="ejercicio." class="section level3" number="7.4.1">
+<h3 number="7.4.1"><span class="header-section-number">7.4.1</span> Ejercicio.</h3>
+<ul>
+<li>Crear un reporte de exploración y análisis de datos a partir de Rmarkdown. El reporte puede estar en html, pdf o word.
+<ul>
+<li>Utilizar negritas y cursivas para resaltar los resultados del análisis.</li>
+<li>Utilizar secciones para dividir el análisis de los datos. Ejemplo: sección lectura de datos, sección de exploración y sección de regresión.</li>
+<li>Utilizar expresiones matemáticas en Rmd para mostrar la formula de un estadístico que vaya a utilizar en el análisis.</li>
+<li>Utilizar chunks con códigos de R.</li>
+</ul></li>
+</ul>
+<p>** Ejemplo ** Reporte en <a href="https://github.com/VilmaRomero/R-Ladies-Lima-rmarkdown/raw/master/reporte/Censo.pdf"></a> realizado por <a href="https://vilmaromero.github.io/"> (RLadies Lima)</a>.</p>
+<p>El códido fuente está disponible en <a href="https://github.com/VilmaRomero/R-Ladies-Lima-rmarkdown/blob/master/reporte/Censo.Rmd"></a>.</p>
 </div>
-<div id="más-recursos" class="slide section level1">
-<h1>Más recursos</h1>
+</div>
+</div>
+<div id="más-sobre-rmarkdown" class="section level1" number="8">
+<h1 number="8"><span class="header-section-number">8</span> Más sobre Rmarkdown:</h1>
+<p><strong>Siguiente sesión:</strong></p>
+<p><a href="personalizar.html">Personalizar Rmd</a></p>
+<p><br></p>
+<div id="más-recursos" class="section level2" number="8.1">
+<h2 number="8.1"><span class="header-section-number">8.1</span> Más recursos</h2>
 <ul>
 <li><p>Yihui Xie, J. J. Allaire, Garrett Grolemund, 2020-10-14, <a href="https://bookdown.org/yihui/rmarkdown/">R Markdown: The Definitive Guide</a></p></li>
 <li><p>Yihui Xie, Christophe Dervieux, Emily Riederer, 2020-09-21, <a href="https://bookdown.org/yihui/rmarkdown-cookbook/">R Markdown Cookbook</a></p></li>
@@ -579,33 +1047,92 @@ Texto en un bloque
 <li><p>Thea Knowles, January 14, 2020, <a href="https://rpubs.com/thealk/academic-writing">RMarkdown and Bookdown for Academic Writing in R</a></p></li>
 </ul>
 <p><br></p>
-<p><strong>Compartir documentos en línea: </strong></p>
+</div>
+<div id="compartir-documentos-en-línea" class="section level2" number="8.2">
+<h2 number="8.2"><span class="header-section-number">8.2</span> Compartir documentos en línea:</h2>
 <ul>
 <li><a href="https://rpubs.com/">RPubs</a></li>
 <li><a href="https://app.netlify.com/drop">Netlify</a></li>
 <li><a href="https://resources.github.com/whitepapers/github-and-rstudio/">Github</a></li>
 </ul>
 </div>
-<div id="más-recursos-1" class="slide section level1 unnumbered">
-<h1 class="unnumbered">Más recursos</h1>
-<p><br></p>
-<p><strong>Guías del curso para aprender Rmarkdown:</strong></p>
-<ul>
-<li><a href="intro_doc.html">Intro Rmd</a></li>
-<li><a href="personalizar.html">Personalizar Rmd</a></li>
-</ul>
-<p><br></p>
 </div>
 
-  <!-- dynamically load mathjax for compatibility with self-contained -->
-  <script>
-    (function () {
-      var script = document.createElement("script");
-      script.type = "text/javascript";
-      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-      document.getElementsByTagName("head")[0].appendChild(script);
-    })();
-  </script>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 </body>
 </html>

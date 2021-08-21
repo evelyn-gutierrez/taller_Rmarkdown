@@ -1,0 +1,25 @@
+---
+title: "Artículo 1"
+description: |
+  Articulo con DISTILL
+author:
+  - name: NombreApellido
+    url: https://example.com/NombreApellido
+    affiliation: Universidad X
+    affiliation_url: https://example.com/UniversidadX
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Distill es un formato de publicación para la escritura científica y técnica, nativo de la web. 
+
+Aprenda más sobre el uso de Distill para R Markdown en <https://rstudio.github.io/distill>.
+
+
+
+
+

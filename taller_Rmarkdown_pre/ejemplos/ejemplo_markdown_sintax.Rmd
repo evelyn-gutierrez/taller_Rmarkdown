@@ -1,0 +1,29 @@
+
+# Titulo nivel 1
+
+## Titulo nivel 2
+
+### Titulo nivel 3
+
+Este es un documento R markdown. Markdown es un formato simple de sintaxis para crear paginas web u otros documentos.
+
+Usar un asterisco sirve para formatear el texto en *cursiva* y doble asterisco para ponerlas en **negritas**.
+
+Se crea una lista con guión:
+
+- Item 1
+- Item 2
+- Item 3
+
+```
+Usar triple tilde inversa (acento agudo)
+Para crear bloques de código.
+```
+
+Podemos añadir expresiones matematicas en latex:
+$P(A|B)=\frac{P(A \cap B)}{P(B)}$
+
+Y también notas al pie de página como citar o añadir bibliografía.[^1]
+
+
+[^1]: Material traducido de R Markdown Quick Tour.

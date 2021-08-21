@@ -1,7 +1,0 @@
-output_dir: "."
-description: |
-  Introducción a RMarkdown
-navbar:
-  left:
-    - text: "Introducción a RMarkdown"
-      href: index.html
