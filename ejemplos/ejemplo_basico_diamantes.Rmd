@@ -14,7 +14,7 @@ smaller <- diamonds %>%
 
 Tenemos `r nrow(diamonds)` diamantes. Solo 
 `r nrow(diamonds) - nrow(smaller)` pesan más de 
-2.5 quilates. La distribución del resto es la siguiente:
+<span style="color:red"> 2.5 quilates </span>. La distribución del resto es la siguiente:
 
 ```{r, echo = FALSE}
 smaller %>% 

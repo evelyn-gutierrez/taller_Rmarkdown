@@ -154,6 +154,8 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
   <link href="site_libs/slidy-2/styles/slidy.css" rel="stylesheet" />
   <script src="site_libs/slidy-2/scripts/slidy.js"></script>
   <script src="site_libs/slidy_shiny-1/slidy_shiny.js"></script>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="css/sfah.css" />
   <meta name="duration" content="5" />
 </head>
 <body>
@@ -287,7 +289,7 @@ Themes for slidify: https://codingclubuc3m.rbind.io/post/2019-09-24/
 <div id="cómo-funciona-1" class="slide section level1 unnumbered">
 <h1 class="unnumbered">¿Cómo funciona?</h1>
 <ul>
-<li><p>Todo comienza con la creación de un documento <strong>.Rmd</strong> en RStudio. Un archivo R Markdown es un simple archivo de texto con una extensión .Rmd. (puede crearlo en el Bloc de notas).</p></li>
+<li><p>Todo comienza con la creación de un documento <strong>.Rmd</strong> en RStudio. Un archivo R Markdown es un simple archivo de texto con una extensión .Rmd (puede crearlo en el Bloc de notas).</p></li>
 <li><p>Para generar un reporte, en RStudio utilice el botón knit que activa la función <code>rmarkdown::render()</code> y ejecuta los bloques de código en el archivo <strong>.Rmd</strong> para incluirlos en el documento final. Estos resultados se convierten en un archivo temporal .md (que contiene el código y los resultados).</p></li>
 <li><p>Este es un bloque de código para compilar un documento y establecer el formato de salida con el argumento <em>output_format</em> de la función <code>render</code>:</p></li>
 </ul>
@@ -299,13 +301,12 @@ Themes for slidify: https://codingclubuc3m.rbind.io/post/2019-09-24/
 </ul>
 <!-- 
 - Tenga en cuenta que *LaTeX* es una herramienta muy poderosa para estructurar documentos, pero esta personalización específica para pdf significa que se pierde la flexibilidad multiformato de Markdown.-->
-<!--
-# Ejercicio 1: Crear y compilar un Rmd {-}
-
-Creación de un Rmd en RStudio:
-
-![](images/crear_mkd.png){width=50%}
--->
+</div>
+<div id="cómo-creo-un-nuevo-rmd" class="slide section level1 unnumbered">
+<h1 class="unnumbered">¿Cómo creo un nuevo Rmd?</h1>
+<p>Creación de un Rmd en RStudio 🐣:</p>
+<p><img src="images/crear_mkd.png" style="width:40.0%" /></p>
+<p>👩‍💻 👨‍💻 Ejercicio 1: Crear y compilar un Rmd</p>
 </div>
 <div id="formatos-de-salida" class="slide section level1">
 <h1>Formatos de salida</h1>
@@ -343,31 +344,30 @@ Creación de un Rmd en RStudio:
 <h1 class="unnumbered">Formatos de salida</h1>
 <p>Hay un gran número de <em>paquetes</em> y <em>plantillas</em> para crear diferentes tipos de documentos con una amplia variedad de estilos predefinidos: plantillas de presentación, artículos periodísticos, libros, tesis, sitios web, blogs, widgets, cuadros de mando, mapas y otras presentaciones interactivas…</p>
 <ul>
-<li><p><a href="https://github.com/yixuan/prettydoc/">prettydoc</a></p></li>
-<li><p><a href="https://bookdown.org/yihui/bookdown/">bookdown</a></p></li>
-<li><p><a href="https://bookdown.org/yihui/blogdown/">blogdown</a></p></li>
-<li><p><a href="https://github.com/rstudio/distill">distill</a></p></li>
-<li><p><a href="https://bookdown.org/yihui/rmarkdown/xaringan-format.html">xaringan</a></p></li>
-<li><p><a href="https://www.htmlwidgets.org">htmlwidgets</a></p></li>
-<li><p><a href="https://shiny.rstudio.com/reference/shiny/1.3.0/shiny-package.html">shiny</a></p></li>
-<li><p><a href="https://rstudio.github.io/leaflet/">leaflet</a></p></li>
-<li><p><a href="https://rmarkdown.rstudio.com/flexdashboard/">flexdashboard</a></p></li>
-<li><p><a href="https://revealjs.com/#/1">revealjs</a></p></li>
-<li><p><a href="http://mangothecat.github.io/rmdshower/skeleton.html">rmdshower</a></p></li>
-<li><p><a href="https://gohugo.io/templates/">Hugo</a></p></li>
-<li><p><a href="https://github.com/mitchelloharawild/vitae">vitae</a></p></li>
 <li><p>Ver <a href="https://rmarkdown.rstudio.com/gallery.html">galeria</a></p></li>
+<li><p>Algunos de los más conocidos:</p>
+<ul>
+<li><a href="https://github.com/yixuan/prettydoc/">prettydoc</a></li>
+<li><a href="https://bookdown.org/yihui/bookdown/">bookdown</a></li>
+<li><a href="https://bookdown.org/yihui/blogdown/">blogdown</a></li>
+<li><a href="https://github.com/rstudio/distill">distill</a></li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/xaringan-format.html">xaringan</a></li>
+<li><a href="https://rmarkdown.rstudio.com/flexdashboard/">flexdashboard</a></li>
+<li><a href="http://mangothecat.github.io/rmdshower/skeleton.html">rmdshower</a></li>
+<li><a href="https://github.com/mitchelloharawild/vitae">vitae</a></li>
+</ul></li>
 <li><p>Hay que tener en cuenta que el uso de estas diferentes herramientas requiere el aprendizaje de una configuración/etiquetado particular que puede ir en detrimento de la interoperabilidad de los formatos.</p></li>
 <li><p>También puede crear sus propias <a href="https://rstudio.github.io/rstudio-extensions/rmarkdown_templates.html">plantillas</a> y <a href="https://bookdown.org/yihui/rmarkdown/word-document.html">estilo de documento</a></p></li>
 </ul>
+<p>👩‍💻 👨‍💻 Ejercicio 2: añadir un tema de <a href="https://github.com/yixuan/prettydoc/">prettydoc</a> al Rmd.</p>
 </div>
 <div id="estructura-de-un-documento-rmarkdown" class="slide section level1">
 <h1>Estructura de un documento RMarkdown</h1>
 <p>Contiene 3 partes:</p>
 <ol style="list-style-type: decimal">
-<li>Un encabezado de metadatos (<em>encabezado YAML</em>): encabezado escrito en <a href="https://en.wikipedia.org/wiki/YAML"><strong>YAML</strong></a> rodeado por 3 guiones</li>
-<li>Texto: formateado en markdown</li>
-<li>Bloques de código: <em>códigos</em> encerrados entre triple tilde invertida (acentos agudos) ```` (Para crearlos rapidamente se puede usar <em>ctrl +alt + i</em>)</li>
+<li>Un encabezado de metadatos (<em>encabezado YAML</em>): encabezado escrito en <a href="https://en.wikipedia.org/wiki/YAML"><strong>YAML</strong></a> rodeado por 3 guiones.</li>
+<li>Texto: formateado en markdown.</li>
+<li>Bloques de código: <em>códigos</em> encerrados entre triple tilde invertida (acentos agudos) ```` (Para crearlos rapidamente se puede usar <em>ctrl +alt + i</em>).</li>
 </ol>
 <p><img src="images/estructura.png" style="width:75.0%" /></p>
 </div>
@@ -406,7 +406,7 @@ Creación de un Rmd en RStudio:
 <ul>
 <li><p>A menudo se compara con <a href="https://www.latex-project.org/">LaTeX</a>; otro lenguaje de marcado más potente pero mucho más complejo para producir documentos pdf.</p></li>
 <li><p>Existen varias versiones de Markdown desarrolladas por diferentes programadores. La que utiliza <a href="https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html%23raw-tex#pandoc_markdown">R Markdown</a> es la versión de <a href="https://pandoc.org/MANUAL.html">Pandoc</a> que también permite convertir los documentos en diferentes formatos.</p></li>
-<li><p>Su gran sencillez lo convierte en una herramienta más limitada en cuanto a la estructuración de documentos que el html, LaTeX y los programas de tratamiento de textos. (véase <a href="https://daringfireball.net/projects/markdown/syntax#philosophy">Gruber</a>)</p></li>
+<li><p>Su gran sencillez lo convierte en una herramienta más limitada en cuanto a la estructuración de documentos que el html, LaTeX y los programas de tratamiento de textos. (<a href="https://daringfireball.net/projects/markdown/syntax#philosophy">Ver Gruber (Creador de )</a>)</p></li>
 <li><p>Por lo tanto, es útil conocer estos lenguajes (html, css, javascript, LaTeX) si quiere personalizar el formato de sus documentos (pero tenga cuidado porque el uso de html y LaTeX puede causar problemas al exportar a ciertos formatos).</p></li>
 </ul>
 <!--
@@ -426,22 +426,26 @@ Creación de un Rmd en RStudio:
 <p><img src="images/Markdown_ejemplo.PNG" /></p>
 <p><a href="https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">Guía de referencia</a></p>
 <p><a href="https://www.markdowntutorial.com/">Tutorial de Markdown</a></p>
-</div>
-<div id="ejercicio-2" class="slide section level1 unnumbered">
-<h1 class="unnumbered">Ejercicio 2</h1>
-<p>Comenzar a hacer un CV en Rmd con la librería <a href="https://github.com/rstudio/pagedown">pagedown</a>.</p>
-<ol style="list-style-type: decimal">
-<li><p>Instalar la librería pagedown.</p>
-<p><code>remotes::install_github('rstudio/pagedown')</code></p></li>
-<li><p>Crear desde modelo: <em>File&gt;New File&gt;RMarkdown&gt;From Template</em></p></li>
-<li><p>Editar títulos y las siguientes secciones:</p></li>
-</ol>
-<ul>
-<li>Short bio.</li>
-<li>Experiencia Profesional.</li>
-<li>Eduación.</li>
-</ul>
-<p>Otra forma de hacer un CV en Rmd es con la librería <a href="https://github.com/mitchelloharawild/vitae">vitae.</a>. Para esto necesitarás tener instalado <span class="math inline">\(LaTex\)</span> o instalar <a href="https://yihui.org/tinytex/">Tinytex</a></p>
+<p>👩‍💻 👨‍💻 Ejercicio: Crear un modelo de reporte con las secciones que debes tener para un análisis exploratorio. Por ejemplo: Lectura de datos, Análisis exploratorio univariado, y análisis exploratorio multivariado. Puedes ser creativo con los nombres.</p>
+<!--
+# Ejercicio 2 {-}
+
+Comenzar a hacer un CV en Rmd con la librería
+[pagedown](https://github.com/rstudio/pagedown).
+
+1. Instalar la librería pagedown. 
+     
+     `remotes::install_github('rstudio/pagedown')`
+    
+2. Crear desde modelo: *File>New File>RMarkdown>From Template*
+3. Editar títulos y las siguientes secciones:
+  - Short bio.
+  - Experiencia Profesional.
+  - Eduación. 
+
+
+Otra forma de hacer un CV en Rmd es con la librería [vitae.](https://github.com/mitchelloharawild/vitae). Para esto necesitarás tener instalado $LaTex$ o instalar [Tinytex](https://yihui.org/tinytex/)
+-->
 </div>
 <div id="códigos-de-r-chunks" class="slide section level1">
 <h1>Códigos de R (Chunks)</h1>
@@ -454,7 +458,7 @@ Creación de un Rmd en RStudio:
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="in">mean(23, 65, 43, 34, 56) # El estilo de los bloques se define mediante la opción &quot;highlight&quot; en el YAML</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
 <ul>
-<li>Las etiquetas de bloque se pueden insertar con el botón <code>insert</code> o con el atajo de teclado <code>ctrl + alt + i</code>.</li>
+<li>Las etiquetas de bloque se pueden añadir con el botón <em>insert</em> o con <em>Ctrl + Alt + i</em>.</li>
 <li>Lo mejor es dividir el código que genera diferentes salidas en diferentes bloques</li>
 </ul>
 <p><br></p>
@@ -466,6 +470,43 @@ Creación de un Rmd en RStudio:
 <p><strong>Resultados</strong>:</p>
 <p>La edad media de nuestros participantes es 23.</p>
 </div>
+<div id="códigos-de-r-ejemplo" class="slide section level1">
+<h1>Códigos de R (Ejemplo)</h1>
+<div class="left" style="float:left;width:48%">
+<p><strong>Texto Markdown</strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &quot;Diamond sizes&quot;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2016-08-25</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="an">output:</span><span class="co"> html_document</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="in">```{r setup, include=FALSE}</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="in">library(ggplot2)</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="in">library(dplyr)</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="in">smaller &lt;- diamonds %&gt;% </span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="in">  filter(carat &lt;= 2.5)</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>*# Shine bright like a diamond</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>*We have data about <span class="in">`r nrow(diamonds)`</span> diamonds.</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>*Only <span class="in">`r nrow(diamonds) - nrow(smaller)`</span> are larger than 2.5 carats.</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>*The distribution of the remainder is shown below:</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="in">smaller %&gt;% </span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="in">  ggplot(aes(carat)) + </span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_freqpoly(binwidth = 0.01)</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
+</div>
+<div class="right" style="float:right;width:48%">
+<p><strong>Output</strong></p>
+<iframe src="https://pebiba-taller-rmd.netlify.app/ejemplos/ejemplo_basico_diamantes.html" width="768" height="600px">
+</iframe>
+</div>
+<p><br></p>
+</div>
 <div id="código-r" class="slide section level1">
 <h1>Código R</h1>
 <h2 id="configuración-de-chunks.">Configuración de <em>chunks</em>.</h2>
@@ -473,8 +514,8 @@ Creación de un Rmd en RStudio:
 <li><p>El “comportamiento” de los bloques de código y la presentación de los resultados pueden configurarse de varias maneras.</p></li>
 <li><p>Knitr ofrece muchas<a href="https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">opciones</a> (<em>chunck options</em>) que pueden añadirse como argumentos entre las llaves de cada bloque (cada opción debe estar separada por una coma).</p></li>
 </ul>
-<div class="sourceCode" id="cb7"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, chunk-label, results=&#39;hide&#39;, fig.height=4}</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, chunk-label, results=&#39;hide&#39;, fig.height=4}</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
 <ul>
 <li><p>Cada bloque puede tener opcionalmente un nombre (<em>etiqueta</em>), debe ser la primera opción.</p></li>
 <li><p>Estas opciones controlan esencialmente cómo se compila (o no) el código de cada bloque y cómo se presentan (o no) los resultados de cada bloque de código.</p></li>
