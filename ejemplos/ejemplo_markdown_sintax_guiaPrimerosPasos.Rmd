@@ -1,0 +1,143 @@
+---
+title: 'RMarkdown: Primeros pasos'
+author: "Evelyn Gutierrez^[egutierreza@pucp.edu.pe]"
+date: "Mayo, 2021"
+output:
+  html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE )
+```
+
+<!-- * Formatos de salida.
+  + html
+  + latex
+  + word
+* Sintaxis de Markdown.
+  +
+  +
+  +
+Fragmentos de código R.
+Otros idiomas con Markdown.
+Documentos interactivos.
+-->
+
+```{r include=FALSE}
+#install.packages('tinytex')
+#tinytex::install_tinytex()  
+```
+
+# Introducción a RMarkdown {#intro}
+
+
+Los beneficios de usar RMarkdown:
+
+* Simple y sencillo: Crear contenido web es rápido y cómodo.
+* A prueba de errores: Difícil cometer errores de sintaxis.
+* Minimalista: Es perfecto para usarlo con editores de texto minimalistas.
+* Versátil: Permite desarrollar análisis de datos y redactar un informe a la vez.
+
+
+## Motivación {#intro2}
+
+Multiples opciones de publicaciones con RMarkdown:
+
+* Repositorio de conocimientos [Aibnb.](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1392362?journalCode=utas20)
+* Tareas académicas en [Rpubs](https://rpubs.com/).
+* Correos personalizados [Mine Çetinkaya-Rundel](https://rmarkdown.rstudio.com/articles_mail_merge.html).
+* Encuesta sobre beneficios de salud para empleadores de [2017.](https://www.kff.org/health-costs/report/2017-employer-health-benefits-survey/)
+* Dashboards en [eelloo](https://www.eelloo.nl/wp-content/uploads/2017/08/infographic_Voorbeelden-infographics-Overzicht.pdf).
+ 
+ 
+# Primeros pasos. {#babysteps}
+
+## Crear un Rmd. {#crearmd}
+
+La creación de un Rmd en RStudio es simple y sencilla.
+
+<center>
+
+![](img/crear_mkd.png){#id .class width=550px}
+
+</center>
+
+
+## Partes de un documento Rmd. {#partes}
+
+Encontraremos 3 partes fundamentales en R Markdown:
+
+* Metadata: Los metadatos son la configuracón del diseño del documento, se pueden cambiar características de margén, fuentes, formato de salida, etc.En métodos avanzados podemos hacer uso del CSS.
+* Narrativa: Es la prosa del informe, puede contener comentarios o conclusiones de los análisis desarrollados.
+* Código: Son los fragmentos de código, pueden ser desarrollados en diferentes lenguajes.
+
+<center>
+
+![](img/partes_markdown.png){#id .class width=450px}
+ 
+</center>
+ 
+
+## Compilar de un documento Rmd. {#compilar}
+
+ > Compilar: Traducir un lenguaje de alto nivel a código absoluto o lenguaje binario
+
+<center>
+
+![](img/compilar.png){#id .class width=250px}
+
+</center>
+
+# Archivos de salida.
+
+<center>
+
+![](img/output_presentation.png){#id .class width=300px}
+
+</center>
+
+Para crear documentos tenemos las siguientes opciones:
+
+* **html_document**
+* word_document
+* pdf_document
+* context_document
+* github_document
+* latex_document
+* md_document
+
+Y para crear presentaciones tenemos las siguientes opciones:
+
+* beamer_presentation
+* ioslides_presentation
+* powerpoint_presentation
+* slidy_presentation
+
+Formato de otros paquetes: 
+
+<center>
+![](img/output_package.png){#id .class width=350px}
+</center>
+ 
+ 
+ 
+## Exportar a PDF
+
+Si deseamos crear un arcivo de tipo PDF utilizando Rmd, necesitaremos instalar LaTeX. Si no tienes instalado LateX, recomendamos instalar TinyTeX:
+
+```{r, eval=FALSE}
+install.packages('tinytex')
+tinytex::install_tinytex()  # Instala TinyTeX
+
+```
+
+
+
+# Más sobre RMarkdown:
+
+ * Introducción a RMarkdown con [Vilma Romero](https://vilmaromero.github.io/rladieslima-rmarkdown-slides/#1).
+ * Guía de Rmarkdown - Primeros pasos de [Evelyn Gutierrez](https://rpubs.com/Elyn1017/rmarkdown_babysteps)
+ * Guía de Rmarkdown - Personalización de Rmd con [Evelyn Gutierrez](https://rpubs.com/Elyn1017/rmarkdown_perso)
+ * [Cheat sheet](https://rstudio.com/resources/cheatsheets/)
+ * [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+ 
