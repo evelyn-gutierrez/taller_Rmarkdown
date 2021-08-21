@@ -958,11 +958,9 @@ Otra forma de hacer un CV en Rmd es con la librería [vitae.](https://github.com
 <li><p>Muchos de los argumentos tienen valores lógicos: TRUE O FALSE (con un valor por defecto que debe ser cambiado si no es apropiado)</p></li>
 <li><p><strong>Opciones globales</strong>: Es posible establecer los valores de los argumentos para todos los bloques desde el principio incluyendo el siguiente bloque al principio del documento (por defecto cuando se crea un nuevo archivo .Rmd):</p></li>
 </ul>
-<p><img src="images/global.png" style="width:40.0%" /></p>
-</div>
-<div id="configuración-de-chunks" class="section level2" number="7.3">
-<h2 number="7.3"><span class="header-section-number">7.3</span> Configuración de chunks</h2>
+<p><img src="images/global.png" style="width:40.0%" /> ## Ejemplos: configuración.</p>
 <p><img src="images/chunks.png" style="width:70.0%" /></p>
+<p><br></p>
 <!--
 - Para presentar y subrayar fragmentos de código sin ejecutarlos, como si fueran texto, insértelos entre 2 tildes (acento grave):
 
@@ -987,17 +985,18 @@ Texto en un bloque
 <br>
 -->
 </div>
-<div id="otros-detalles" class="section level2" number="7.4">
-<h2 number="7.4"><span class="header-section-number">7.4</span> Otros detalles:</h2>
+<div id="otros-detalles" class="section level2" number="7.3">
+<h2 number="7.3"><span class="header-section-number">7.3</span> Otros detalles:</h2>
 <ul>
 <li><p>Es mejor añadir una línea en blanco entre diferentes elementos, como un título y un párrafo.</p></li>
 <li><p>Para hacer un salto de línea: termine la línea con dos espacios + Enter.</p></li>
 <li><p>Para añadir espacios adicionales entre líneas/secciones, utilice la etiqueta html: <code>&lt;br&gt;</code>.</p></li>
 <li><p>Para incluir comentarios que no saldrán en el documento final, utilice comentarios en html: <code>&lt;!-- Esto es un comentario --&gt;</code>.</p></li>
 </ul>
+<p><br></p>
 </div>
-<div id="ejercicio." class="section level2" number="7.5">
-<h2 number="7.5"><span class="header-section-number">7.5</span> Ejercicio. 👩‍💻 👨‍💻</h2>
+<div id="ejercicio." class="section level2" number="7.4">
+<h2 number="7.4"><span class="header-section-number">7.4</span> Ejercicio. 👩‍💻 👨‍💻</h2>
 <p><strong>Ejercicio4</strong></p>
 <ul>
 <li>Crear un reporte de exploración y análisis de datos a partir de Rmarkdown. El reporte puede estar en html, pdf o word.
@@ -1031,13 +1030,35 @@ Texto en un bloque
 <p><br></p>
 </div>
 </div>
-<div id="más-sobre-rmarkdown" class="section level1" number="8">
-<h1 number="8"><span class="header-section-number">8</span> Más sobre Rmarkdown:</h1>
+<div id="compartir-documentos-en-línea." class="section level1" number="8">
+<h1 number="8"><span class="header-section-number">8</span> Compartir documentos en línea.</h1>
+<ul>
+<li><a href="https://rpubs.com/">RPubs</a></li>
+<li><a href="https://app.netlify.com/drop">Netlify</a></li>
+<li><a href="https://resources.github.com/whitepapers/github-and-rstudio/">Github</a></li>
+</ul>
+<p>Para compartirlo en RPubs:</p>
+<ol style="list-style-type: decimal">
+<li><p>Crear una cuenta en <a href="https://rpubs.com/">RPubs</a></p></li>
+<li><p>Ir a <em>Publish&gt;Publish Website</em></p></li>
+</ol>
+<p><img src="images/RPubs0.PNG" style="width:50.0%" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Seleccionar RPubs y seguir las instrucciones.</li>
+</ol>
+<p><img src="images/RPubs.PNG" style="width:50.0%" /></p>
+<p><strong>Ejercicio 5</strong> 👩‍💻 👨‍💻</p>
+<ul>
+<li>Publicar el análisis en Rpubs.</li>
+</ul>
+</div>
+<div id="más-sobre-rmarkdown" class="section level1" number="9">
+<h1 number="9"><span class="header-section-number">9</span> Más sobre Rmarkdown:</h1>
 <p><br></p>
 <p><strong>Siguiente sesión:</strong> <a href="personalizar.html">Personalizar Rmd</a></p>
 <p><br></p>
-<div id="más-recursos" class="section level2" number="8.1">
-<h2 number="8.1"><span class="header-section-number">8.1</span> Más recursos</h2>
+<div id="más-recursos" class="section level2" number="9.1">
+<h2 number="9.1"><span class="header-section-number">9.1</span> Más recursos</h2>
 <ul>
 <li><p>Yihui Xie, J. J. Allaire, Garrett Grolemund, 2020-10-14, <a href="https://bookdown.org/yihui/rmarkdown/">R Markdown: The Definitive Guide</a></p></li>
 <li><p>Yihui Xie, Christophe Dervieux, Emily Riederer, 2020-09-21, <a href="https://bookdown.org/yihui/rmarkdown-cookbook/">R Markdown Cookbook</a></p></li>
@@ -1055,20 +1076,6 @@ Texto en un bloque
 <li><p>Thea Knowles, January 14, 2020, <a href="https://rpubs.com/thealk/academic-writing">RMarkdown and Bookdown for Academic Writing in R</a></p></li>
 </ul>
 <p><br></p>
-</div>
-<div id="compartir-documentos-en-línea" class="section level2" number="8.2">
-<h2 number="8.2"><span class="header-section-number">8.2</span> Compartir documentos en línea:</h2>
-<ul>
-<li><a href="https://rpubs.com/">RPubs</a></li>
-<li><a href="https://app.netlify.com/drop">Netlify</a></li>
-<li><a href="https://resources.github.com/whitepapers/github-and-rstudio/">Github</a></li>
-</ul>
-<div id="ejercicio-5" class="section level3" number="8.2.1">
-<h3 number="8.2.1"><span class="header-section-number">8.2.1</span> <strong>Ejercicio 5</strong> 👩‍💻 👨‍💻</h3>
-<ul>
-<li>Publicar el análisis en Rpubs.</li>
-</ul>
-</div>
 </div>
 </div>
 
