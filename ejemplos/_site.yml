@@ -1,0 +1,15 @@
+output_dir: "taller_Rmarkdown"
+description: |
+  Introducción a RMarkdown
+navbar:
+  left:
+    - text: "Introducción"
+      menu:
+        - text: "Presentación Intro"
+          href: index.html
+        - text: "Guia: Introducción a Rmd"
+          href: intro_doc.html
+    - text: "Guia: Personalizar Rmd"
+      href: personalizar.html
+    #- text: "Modelos"
+    #  href: Ejemplos.html

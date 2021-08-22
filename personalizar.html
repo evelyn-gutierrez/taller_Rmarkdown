@@ -890,11 +890,8 @@ nocite: |
 </ul>
 <hr />
 <p></br></p>
-</div>
-<div id="páginas-web" class="section level1" number="10">
-<h1 number="10"><span class="header-section-number">10</span> Páginas web</h1>
-<div id="bookdown" class="section level2" number="10.1">
-<h2 number="10.1"><span class="header-section-number">10.1</span> Bookdown</h2>
+<div id="bookdown" class="section level2" number="9.1">
+<h2 number="9.1"><span class="header-section-number">9.1</span> Bookdown</h2>
 <ul>
 <li><p>En RStudio: <em>File -&gt; New Project -&gt; New Directory -&gt; Book Project using bookdown</em></p></li>
 <li><p>Sirve para escribir documentos largos como un libro a partir de varios documentos R Markdown donde normalmente cada archivo es un capítulo.</p></li>
@@ -913,8 +910,8 @@ nocite: |
 <li><a href="https://eddjberry.netlify.com/post/writing-your-thesis-with-bookdown/">Escribir una tesis con bookdown</a></li>
 </ul>
 </div>
-<div id="blogdown" class="section level2" number="10.2">
-<h2 number="10.2"><span class="header-section-number">10.2</span> Blogdown</h2>
+<div id="blogdown" class="section level2" number="9.2">
+<h2 number="9.2"><span class="header-section-number">9.2</span> Blogdown</h2>
 <ul>
 <li><p>Sirve para crear páginas web. Puede ser utilizado para crear un bitacora de trabajos y publicarlos.</p></li>
 <li><p>Algunas páginas interesantes creadas con <em>blogdown</em>: <a href="https://yihui.org/">yihui.org</a>, <a href="https://simplystatistics.org/">simplystatistics.org</a>, <a href="https://www.datascienceblog.net/">datascienceblog.net</a></p></li>
@@ -923,8 +920,8 @@ nocite: |
 </ul>
 </div>
 </div>
-<div id="otros-lenguajes." class="section level1" number="11">
-<h1 number="11"><span class="header-section-number">11</span> Otros lenguajes.</h1>
+<div id="otros-lenguajes." class="section level1" number="10">
+<h1 number="10"><span class="header-section-number">10</span> Otros lenguajes.</h1>
 <p>Es poco conocido que R Markdown admite otros lneguajes de programación, como Python, Julia, C ++ y SQL entre otros. Para esto nos ayuda el paquete Knitr. Entre los lenguajes disponibles (knitr::knit_engines) están:</p>
 <p>Para usar un lenguaje diferente podemos cambiar el argumento en el encabezado de un bloque de código en r por un una de las siguientes alternativas.</p>
 <div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(knitr<span class="sc">::</span>knit_engines<span class="sc">$</span><span class="fu">get</span>())</span></code></pre></div>
@@ -981,15 +978,15 @@ r.variable1
 r.variable2
 ```</code></pre>
 </div>
-<div id="contenido-interactivo" class="section level1" number="12">
-<h1 number="12"><span class="header-section-number">12</span> Contenido interactivo</h1>
+<div id="contenido-interactivo" class="section level1" number="11">
+<h1 number="11"><span class="header-section-number">11</span> Contenido interactivo</h1>
 <p>Con R Markdown también podemos crear contenido interactivo. Hay dos tipos de documentos interactivos que podemos hacer con R Markdown: .</p>
 <ul>
 <li><a href="https://www.htmlwidgets.org/">HTML widgets</a> para incorporar visualizaciones a partir de librería que hacen uso de javascript.</li>
 <li><a href="https://shiny.rstudio.com/tutorial/">shiny</a> para crear aplicaciones web. Es una herramienta muy versatil. Aprender shiny es un tema amplio, pero podemos utilizar algunos elementos básicos y utilizarlos en Rmarkdown: <a href="https://bookdown.org/yihui/rmarkdown/shiny-documents.html">Rmarkdown + Shiny</a></li>
 </ul>
-<div id="html-widgets" class="section level2" number="12.1">
-<h2 number="12.1"><span class="header-section-number">12.1</span> HTML widgets</h2>
+<div id="html-widgets" class="section level2" number="11.1">
+<h2 number="11.1"><span class="header-section-number">11.1</span> HTML widgets</h2>
 <ul>
 <li><p>Se pueden crear diversas visualizaciones con los HTML widgets. Se pueden ver todos los widgets en la <a href="http://gallery.htmlwidgets.org/">gallería de HTML widgets</a>.</p></li>
 <li><p>Note que solo es posible tener la interactividad con documentos HTML. Si se crean archivos de otro tipo como pdf, word, no habrá elementos interactivos.</p></li>
@@ -1008,18 +1005,18 @@ r.variable2
 library(leaflet)
 m &lt;- leaflet() %&gt;%
   addTiles() %&gt;%  # Add default OpenStreetMap map tiles
-  addMarkers(lng=174.768, lat=-36.852, popup=&quot;The birthplace of R&quot;)
+  addMarkers(lng=174.768, lat=-36.852, popup=&quot;UNI&quot;)
 m  # Print the map
 ```</code></pre>
 <p><strong>Resultado: </strong></p>
-<div id="htmlwidget-6dfa045461c6e7cf3a8c" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-6dfa045461c6e7cf3a8c">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[-12.0196342,-77.0491277,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Aquí esta la FIEECS",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-12.0196342,-12.0196342],"lng":[-77.0491277,-77.0491277]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-55d953ed120919dd1a10" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-55d953ed120919dd1a10">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[-12.0196342,-77.0491277,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Aquí esta la FIEECS",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-12.0196342,-12.0196342],"lng":[-77.0491277,-77.0491277]}},"evals":[],"jsHooks":[]}</script>
 <ul>
 <li>Para más detalles puedes revisar <a href="https://bookdown.org/yihui/rmarkdown/html-widgets.html">HTML widegts, tutorial de Rmarkdown.</a></li>
 </ul>
 </div>
-<div id="shiny-apps" class="section level2" number="12.2">
-<h2 number="12.2"><span class="header-section-number">12.2</span> Shiny apps</h2>
+<div id="shiny-apps" class="section level2" number="11.2">
+<h2 number="11.2"><span class="header-section-number">11.2</span> Shiny apps</h2>
 <p><a href="https://shiny.rstudio.com/">Shiny</a> sirve para crear aplicaciones web y es un tema amplio a cubrir pero con mucho potencial. Junto a RMarkdown podemos crear elementos Shiny embebidos en nuestros reportes con Rmarkdown.</p>
 <ul>
 <li><a href="https://bookdown.org/yihui/rmarkdown/shiny-documents.html">Rmarkdown + Shiny</a></li>
@@ -1032,22 +1029,29 @@ m  # Print the map
 <span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
 </div>
 </div>
-<div id="cheatshets" class="section level1" number="13">
-<h1 number="13"><span class="header-section-number">13</span> Cheatshets</h1>
-<p>Existen diferentes archivos que resumen ((<em>Cheatsheet</em>)[<a href="https://www.rstudio.com/resources/cheatsheets/" class="uri">https://www.rstudio.com/resources/cheatsheets/</a>]) los códigos para utilizar en Rmarkdown.</p>
+<div id="cheatshets" class="section level1" number="12">
+<h1 number="12"><span class="header-section-number">12</span> Cheatshets</h1>
+<p>Existen diferentes archivos (<em>Cheatsheet</em>)[<a href="https://www.rstudio.com/resources/cheatsheets/" class="uri">https://www.rstudio.com/resources/cheatsheets/</a>]) los códigos para utilizar en Rmarkdown.</p>
 </div>
-<div id="otros" class="section level1" number="14">
-<h1 number="14"><span class="header-section-number">14</span> Otros</h1>
-<div id="insertar-emojis" class="section level2" number="14.1">
-<h2 number="14.1"><span class="header-section-number">14.1</span> Insertar emojis:</h2>
+<div id="bonus" class="section level1" number="13">
+<h1 number="13"><span class="header-section-number">13</span> Bonus</h1>
+<div id="insertar-emojis" class="section level2" number="13.1">
+<h2 number="13.1"><span class="header-section-number">13.1</span> Insertar emojis:</h2>
 <p><strong>Código:</strong></p>
 <pre><code>r emo::ji(&quot;confused&quot;)</code></pre>
 <p><strong>Resultado</strong></p>
 <p>😕</p>
 </div>
-<div id="ejercicio" class="section level2" number="14.2">
-<h2 number="14.2"><span class="header-section-number">14.2</span> Ejercicio:</h2>
-<p>Los datos en este <a href="data_juego.csv">enlace</a> proceden de jugadores que instalaron un juego mientras se desarrollaba una prueba de una nueva versión de este. Cuando un jugador instaló el juego, se le asignó aleatoriamente el g1 (el videojuego usual) o el g2 (la nueva versión). Los datos dispoibles son los siguientes:</p>
+</div>
+<div id="otros" class="section level1" number="14">
+<h1 number="14"><span class="header-section-number">14</span> Otros</h1>
+<div id="ejercicios" class="section level2" number="14.1">
+<h2 number="14.1"><span class="header-section-number">14.1</span> Ejercicios</h2>
+<p><strong>Ejercicio 1:</strong></p>
+<p>Utilizar los datos <code>quake</code> de la librería <code>datasets</code> para crear un reporte que incluya gráficos HTML widgets.</p>
+<p>Puede guiarse del archivo de este <a href="ejemplos/censo_comisarias_interactivo.Rmd">enlace (reporte interactivo de comisarias.)</a></p>
+<p><strong>Ejercicio 2:</strong></p>
+<p>Los datos en este <a href="datos/data_juego.csv">enlace</a> proceden de jugadores que instalaron un juego mientras se desarrollaba una prueba de una nueva versión de este. Cuando un jugador instaló el juego, se le asignó aleatoriamente el g1 (el videojuego usual) o el g2 (la nueva versión). Los datos dispoibles son los siguientes:</p>
 <ul>
 <li>userid - un número único que identifica a cada jugador.</li>
 <li>versión - si el jugador fue puesto en el grupo de control (g1) o en el grupo de prueba (g2).</li>
@@ -1057,6 +1061,18 @@ m  # Print the map
 </ul>
 <p>Crear un reporte en RMarkdown donde se desarrolle lo siguiente: 1. Entender el problema del negocio y los datos. 2. Analizar con estadísticas de resumen y gráficos. 4. Evaluar los resultados y recomendar una decisión empresarial.</p>
 <p>Considerar: - Utilizar la mayor cantidad de herramientas de Rmarkdown.</p>
+</div>
+<div id="ejemplos" class="section level2" number="14.2">
+<h2 number="14.2"><span class="header-section-number">14.2</span> Ejemplos:</h2>
+<ul>
+<li><a href="https://drive.google.com/drive/folders/1U68GzY8LkNQ9wg8OVRxZDLT8-ns_7MpF?usp=sharing">Descargar ejemplos Rmd</a></li>
+</ul>
+</div>
+<div id="datos" class="section level2" number="14.3">
+<h2 number="14.3"><span class="header-section-number">14.3</span> Datos:</h2>
+<ul>
+<li><a href="https://drive.google.com/drive/folders/1oXu7dRZoLvBYsXq0W22BQstGL7v4-_TU?usp=sharing">Descargar todos los datos</a></li>
+</ul>
 <style>
 .resultado {
   background-color: yellow;
